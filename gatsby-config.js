@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/portfolios",
   siteMetadata: {
     title: `Portfolios`,
     description: `This is a portfolios site built with gatsby`,
