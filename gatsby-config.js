@@ -6,6 +6,7 @@ module.exports = {
     author: `@boryslee`,
   },
   plugins: [
+    'gatsby-plugin-material-ui',
     'gatsby-plugin-eslint',
     `gatsby-plugin-react-helmet`,
     {
