@@ -7,8 +7,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 import HideOnScroll from './HideOnScroll';
+import ScrollTop from './ScrollTop';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -32,6 +35,13 @@ const Header = (props) => {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
+      {/* back-to-top-anchor */}
+      <Toolbar id="back-to-top-anchor" />
+      <ScrollTop {...props}>
+        <Fab color="secondary" size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
     </>
   )
 }
