@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: "/portfolios",
   siteMetadata: {
-    title: `Portfolios`,
+    title: `Borys Lee`,
     description: `This is a portfolios site built with gatsby`,
     author: `@boryslee`,
   },

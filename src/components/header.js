@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => {
         <Toolbar>
           <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            {siteTitle}
           </Typography>
         </Toolbar>
       </AppBar>
