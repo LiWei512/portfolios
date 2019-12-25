@@ -7,6 +7,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Slide from '@material-ui/core/Slide';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -14,19 +16,36 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Header = ({ siteTitle }) => {
+function HideOnScroll({ children }) {
+  const trigger = useScrollTrigger();
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
+HideOnScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+};
+
+const Header = (props) => {
   const classes = useStyles();
+  const { siteTitle } = props;
   return (
     <>
       <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar>
-          <CameraIcon className={classes.icon} />
-          <Typography variant="h6" color="inherit" noWrap>
-            {siteTitle}
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <HideOnScroll {...props}>
+        <AppBar>
+          <Toolbar>
+            <CameraIcon className={classes.icon} />
+            <Typography variant="h6" color="inherit" noWrap>
+              {siteTitle}
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
     </>
   )
 }
