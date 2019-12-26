@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolbar: {
     margin: '0 auto',
-    maxWidth: 1200,
+    maxWidth: 1280,
     width: '100%'
   },
   navbar: {
@@ -74,7 +74,7 @@ const Header = (props) => {
             </Typography>
             <ul className={classes.navbar}>
               {navLinks.map((list) =>
-                <li>
+                <li key={list.title}>
                   <GatsbyLink to={list.to} className={classes.link} activeClassName={classes.active}>{list.title}</GatsbyLink>
                 </li>
               )}
