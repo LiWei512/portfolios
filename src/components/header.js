@@ -1,6 +1,5 @@
 import React from "react";
-import { Link as GatsbyLink, navigate } from 'gatsby';
-import PropTypes from "prop-types";
+import { Link as GatsbyLink, navigate, useStaticQuery, graphql } from 'gatsby';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -8,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Img from "gatsby-image";
 
 import HideOnScroll from './HideOnScroll';
 import ScrollTop from './ScrollTop';
@@ -17,6 +17,9 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       cursor: 'pointer',
     }
+  },
+  icon: {
+    margin: '0 0.5rem',
   },
   toolbar: {
     margin: '0 auto',
@@ -62,15 +65,38 @@ const navLinks = [
 
 const Header = (props) => {
   const classes = useStyles();
-  const { siteTitle } = props;
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      file(relativePath: { eq: "gatsby-icon.png" }) {
+        childImageSharp {
+          # Specify a fixed image and fragment.
+          # The default width is 400 pixels
+          fixed(width: 36, height: 36) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <>
       <CssBaseline />
       <HideOnScroll {...props}>
         <AppBar>
           <Toolbar className={classes.toolbar}>
+            <Img
+              className={classes.icon}
+              fixed={data.file.childImageSharp.fixed}
+              alt="Borys Lee"
+            />
             <Typography variant="h6" color="inherit" noWrap className={classes.title} onClick={() => navigate('/')}>
-              {siteTitle}
+              {data.site.siteMetadata.title}
             </Typography>
             <ul className={classes.navbar}>
               {navLinks.map((list) =>
@@ -91,14 +117,6 @@ const Header = (props) => {
       </ScrollTop>
     </>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header

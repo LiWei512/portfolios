@@ -49,10 +49,10 @@ const IndexPage = ({ data }) => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <div className={classes.rightPaper}>
-              <Typography variant="h2" color="inherit" className={classes.description}>
+              <Typography variant="h2" color="inherit">
                 About me
               </Typography>
-              <Typography variant="h6" color="inherit" className={classes.description}>
+              <Typography variant="h6" color="inherit">
                 {data.site.siteMetadata.description}
               </Typography>
               <SocialGroup />
