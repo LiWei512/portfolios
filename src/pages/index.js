@@ -68,7 +68,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "boryslee.jpg" }) {
+    file(relativePath: { eq: "labtocat.png" }) {
       childImageSharp {
         # Specify a fixed image and fragment.
         # The default width is 400 pixels
