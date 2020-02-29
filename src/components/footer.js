@@ -5,7 +5,7 @@ import Emoji from './Emoji';
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.secondary.main,
     padding: theme.spacing(6),
   },
 }));

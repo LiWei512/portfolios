@@ -33,7 +33,29 @@ module.exports = {
     ]
   },
   plugins: [
-    'gatsby-plugin-material-ui',
+    // {
+    //   resolve: `gatsby-plugin-material-ui`,
+    //   options: {
+    //     theme: {
+    //       // material-ui shrine theme
+    //       palette: {
+    //         primary: {
+    //           main: "#FEDBD0",
+    //         },
+    //         second: {
+    //           main: "#FEEAE6"
+    //         },
+    //         background: {
+    //           default: '#FFFFFF'
+    //         },
+    //         text: {
+    //           primary: "#442C2E"
+    //         }
+    //       },
+    //     },
+    //   },
+    // },
+    'gatsby-theme-material-ui',
     'gatsby-plugin-eslint',
     `gatsby-plugin-react-helmet`,
     {

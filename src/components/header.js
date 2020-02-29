@@ -15,13 +15,18 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
 const useStyles = makeStyles(theme => ({
   title: {
-    color: 'black',
     '&:hover': {
       cursor: 'pointer',
     }
   },
   icon: {
     margin: '0 0.5rem',
+  },
+  appBar: {
+    backgroundColor: theme.palette.primary.main
+  },
+  transparentAppBar: {
+    backgroundColor: 'transparent'
   },
   toolbar: {
     margin: '0 auto',
@@ -39,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   link: {
-    color: 'black',
+    color: theme.palette.text.primary,
     textDecoration: 'none',
   },
   active: {
@@ -92,14 +97,14 @@ const Header = (props) => {
     <div>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar style={{ background: !trigger ? 'transparent' : 'white' }}>
+        <AppBar className={trigger ? classes.appBar : classes.transparentAppBar}>
           <Toolbar className={classes.toolbar}>
             <Img
               className={classes.icon}
               fixed={data.file.childImageSharp.fixed}
               alt="Borys Lee"
             />
-            <Typography variant="h6" color="inherit" noWrap className={classes.title} onClick={() => navigate('/')}>
+            <Typography variant="h6" color="textPrimary" noWrap className={classes.title} onClick={() => navigate('/')}>
               {data.site.siteMetadata.title}
             </Typography>
             <ul className={classes.navbar}>
