@@ -36,15 +36,15 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function PortfolioModal(props) {
+export default function ProjectModal(props) {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const classes = useStyles();
 
-  const { open, onClose, portfolioId } = props;
+  const { open, onClose, projectId } = props;
   const data = useStaticQuery(graphql`
     query {
-      allPortfoliosJson {
+      allProjectsJson {
         edges {
           node {
             id
@@ -65,8 +65,10 @@ export default function PortfolioModal(props) {
       }
     }
   `);
-  let { node: portfolio } = data.allPortfoliosJson.edges.find(({ node }) => node.id === portfolioId);
-  console.log(portfolio);
+  let edge = data.allProjectsJson.edges.find((edge) => edge.node.id === projectId);
+
+  let project = edge.node;
+  console.log(project);
   return (
     <Dialog
       fullScreen={fullScreen}
@@ -76,10 +78,10 @@ export default function PortfolioModal(props) {
       onClose={onClose}
       aria-labelledby="responsive-dialog-title"
     >
-      <DialogTitle id="responsive-dialog-title">{portfolio.title}</DialogTitle>
+      <DialogTitle id="responsive-dialog-title">{project.title}</DialogTitle>
       <DialogContent>
         {
-          portfolio.images.map((image, index) => (
+          project.images.map((image, index) => (
             <Img
               key={index}
               fluid={image.childImageSharp.fluid}
@@ -94,7 +96,7 @@ export default function PortfolioModal(props) {
             Skills
           </Typography>
           <Grid container spacing={2}>
-            {portfolio.skills.map((skill, index) => <Grid key={index} item><Paper className={classes.tagSkill}>{skill}</Paper></Grid>)}
+            {project.skills.map((skill, index) => <Grid key={index} item><Paper className={classes.tagSkill}>{skill}</Paper></Grid>)}
           </Grid>
         </Box>
 
@@ -103,7 +105,7 @@ export default function PortfolioModal(props) {
             Project description
           </Typography>
           <Typography variant="body2" gutterBottom>
-            {portfolio.description}
+            {project.description}
           </Typography>
         </Box>
 
@@ -112,7 +114,7 @@ export default function PortfolioModal(props) {
             Details
           </Typography>
           <ul className={classes.detailList}>
-            {portfolio.details.map((detail, index) => <li key={index}><Typography variant="body2" gutterBottom>{detail}</Typography></li>)}
+            {project.details.map((detail, index) => <li key={index}><Typography variant="body2" gutterBottom>{detail}</Typography></li>)}
           </ul>
         </Box>
 
@@ -121,7 +123,7 @@ export default function PortfolioModal(props) {
             URL
           </Typography>
           <Typography variant="body2" gutterBottom>
-            {portfolio.url}
+            {project.url}
           </Typography>
         </Box>
 
@@ -130,7 +132,7 @@ export default function PortfolioModal(props) {
   )
 }
 
-PortfolioModal.propTypes = {
+ProjectModal.propTypes = {
   open: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
 }

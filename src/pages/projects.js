@@ -2,7 +2,7 @@ import React from "react"
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import { graphql, Link } from "gatsby";
+import { graphql, Link, withPrefix } from "gatsby";
 import Img from "gatsby-image";
 import Typography from '@material-ui/core/Typography';
 import { Router, navigate } from "@reach/router";
@@ -11,7 +11,7 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import PortfolioModal from '../components/PortfolioModal';
+import ProjectModal from '../components/ProjectModal';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,10 +27,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const PortfoliosPage = ({ data }) => {
+const ProjectsPage = ({ data }) => {
   const classes = useStyles();
   const handleClose = () => {
-    navigate('/portfolios');
+    navigate(withPrefix('/projects'));
   };
 
   return (
@@ -38,11 +38,11 @@ const PortfoliosPage = ({ data }) => {
       <Layout>
         <SEO title="Work" />
         <Container maxWidth="lg" className={classes.root}>
-          {data.allPortfoliosJson.edges.map(({ node: li }) => (
+          {data.allProjectsJson.edges.map(({ node: li }) => (
             <Paper className={classes.paper} key={li.id}>
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6} md={4}>
-                  <ButtonBase className={classes.image} onClick={() => navigate(`/portfolios/${li.id}`)}>
+                  <ButtonBase className={classes.image} onClick={() => navigate(withPrefix(`/projects/${li.id}`))}>
                     <Img
                       fluid={li.coverImage.childImageSharp.fluid}
                       alt="Borys Lee"
@@ -61,7 +61,7 @@ const PortfoliosPage = ({ data }) => {
                       </Typography>
                     </Grid>
                     <Grid item>
-                      <Link style={{ color: `black` }} to={`/portfolios/${li.id}`}>
+                      <Link style={{ color: `black` }} to={`/projects/${li.id}`}>
                         Show More
                       </Link>
                     </Grid>
@@ -71,19 +71,19 @@ const PortfoliosPage = ({ data }) => {
             </Paper>
           ))}
         </Container>
-        <Router basepath="/portfolios">
-          <PortfolioModal path='/:portfolioId' open={true} onClose={handleClose} />
+        <Router basepath={withPrefix("/projects")}>
+          <ProjectModal path='/:projectId' open={true} onClose={handleClose} />
         </Router>
       </Layout>
     </>
   )
 }
 
-export default PortfoliosPage;
+export default ProjectsPage;
 
 export const query = graphql`
   query {
-    allPortfoliosJson {
+    allProjectsJson {
       edges {
         node {
           id

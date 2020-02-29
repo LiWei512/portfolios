@@ -50,8 +50,8 @@ const navLinks = [
     title: 'About',
   },
   {
-    to: '/portfolios',
-    title: 'Portfolios',
+    to: '/projects',
+    title: 'Projects',
   },
   {
     to: '/blog',
