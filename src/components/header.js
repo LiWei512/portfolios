@@ -11,9 +11,11 @@ import Img from "gatsby-image";
 
 import HideOnScroll from './HideOnScroll';
 import ScrollTop from './ScrollTop';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
 const useStyles = makeStyles(theme => ({
   title: {
+    color: 'black',
     '&:hover': {
       cursor: 'pointer',
     }
@@ -24,7 +26,8 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     margin: '0 auto',
     maxWidth: 1280,
-    width: '100%'
+    width: '100%',
+    // background: 'white',
   },
   navbar: {
     listStyle: 'none',
@@ -36,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   link: {
-    color: 'white',
+    color: 'black',
     textDecoration: 'none',
   },
   active: {
@@ -83,12 +86,13 @@ const Header = (props) => {
       }
     }
   `)
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 0 });
 
   return (
-    <>
+    <div>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar>
+        <AppBar style={{ background: !trigger ? 'transparent' : 'white' }}>
           <Toolbar className={classes.toolbar}>
             <Img
               className={classes.icon}
@@ -109,13 +113,13 @@ const Header = (props) => {
         </AppBar>
       </HideOnScroll>
       {/* back-to-top-anchor */}
-      <Toolbar id="back-to-top-anchor" />
+      <div id="back-to-top-anchor" />
       <ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
-    </>
+    </div>
   )
 }
 

@@ -15,7 +15,8 @@ import ProjectModal from '../components/ProjectModal';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    minHeight: 'calc(100vh - 64px)',
+    minHeight: '100vh',
+    paddingTop: '4rem'
   },
   paper: {
     padding: theme.spacing(2),
@@ -36,7 +37,7 @@ const ProjectsPage = ({ data }) => {
   return (
     <>
       <Layout>
-        <SEO title="Work" />
+        <SEO title="Projects" />
         <Container maxWidth="lg" className={classes.root}>
           {data.allProjectsJson.edges.map(({ node: li }) => (
             <Paper className={classes.paper} key={li.id}>
