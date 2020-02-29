@@ -53,14 +53,14 @@ const navLinks = [
     to: '/projects',
     title: 'Projects',
   },
-  {
-    to: '/blog',
-    title: 'Blog',
-  },
-  {
-    to: '/contact',
-    title: 'Contact',
-  },
+  // {
+  //   to: '/blog',
+  //   title: 'Blog',
+  // },
+  // {
+  //   to: '/contact',
+  //   title: 'Contact',
+  // },
 ];
 
 const Header = (props) => {
