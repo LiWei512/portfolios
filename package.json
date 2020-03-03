@@ -26,6 +26,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-vertical-timeline-component": "^2.5.0",
     "typeface-roboto": "^0.0.75"
   },
   "devDependencies": {
@@ -51,7 +52,7 @@
   "scripts": {
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby clean && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

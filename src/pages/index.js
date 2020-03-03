@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import LifeTimeline from "../components/Sections/LifeTimeline";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -67,6 +68,7 @@ const IndexPage = ({ data }) => {
           </Typography>
         </Container>
       </Container>
+      <LifeTimeline />
     </Layout>
   )
 }

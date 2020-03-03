@@ -1,0 +1,23 @@
+[
+  {
+    "logo": "./images/logos/nrl.png",
+    "title": "Fullstack developer",
+    "subtitle": "San Franscisco, California",
+    "description": "I worked as a full-stack developer in this company.",
+    "date": "Apr 2019 - present"
+  },
+  {
+    "logo": "./images/logos/64.png",
+    "title": "Fullstack developer",
+    "subtitle": "Shenyang, Liaoning, China",
+    "description": "I worked as a full-stack developer in this company.",
+    "date": "Jun 2018 - Dec 2018"
+  },
+  {
+    "logo": "./images/logos/64.png",
+    "title": "Unity developer",
+    "subtitle": "Shenyang, Liaoning, China",
+    "description": "I learned a lot about computer game concepts, 2D games, 3D games, game engines, game characteristics of various genres, and the Unity game platform.",
+    "date": "Jan 2018 - Jun 2018"
+  }
+]
