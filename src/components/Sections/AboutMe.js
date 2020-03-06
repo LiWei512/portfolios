@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    border: '1px solid white',
+    // border: '1px solid white',
   },
   avatar: {
     width: 160,
