@@ -5,6 +5,10 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Img from "gatsby-image";
 import { graphql, useStaticQuery } from "gatsby";
+import Avatar from '@material-ui/core/Avatar';
+import Link from '@material-ui/core/Link';
+
+import SocialGroup from '../SocialGroup';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,6 +46,11 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    border: '1px solid white',
+  },
+  avatar: {
+    width: 160,
+    height: 160
   }
 }));
 
@@ -78,13 +87,37 @@ export default function AboutMe() {
         />
       </div>
       <Container maxWidth={"lg"} className={classes.splashContent}>
-        <Box display="flex" flexDirection="column">
-          <Typography variant="h2" component="h1" align="center">
-            <b>Learn to Create, Learn to Innovate</b>
+        <Box display="flex" flexDirection="column" alignItems="center">
+
+          <Box pb={4}>
+            <Avatar alt="Remy Sharp" src="https://i.pravatar.cc/128" className={classes.avatar} />
+          </Box>
+
+          <Box pb={4}>
+            <Typography variant="h2" component="h1" align="center">
+              <b>Learn to Create, Learn to Innovate</b>
+            </Typography>
+          </Box>
+
+          <Box pb={4}>
+            <Typography variant="h6" component="h6" align="center">
+              <b>This is Borys Lee, full-stack developer and crypto enthusiast</b>
+            </Typography>
+          </Box>
+
+          <Box pb={4}>
+            <Typography variant="h6" component="span" align="center">
+              I am a freelancer based in Shenyang, Liaoning, China.
           </Typography>
-          <Typography variant="h6" component="span" align="center">
-            <b>Learn more about what I do</b>
-          </Typography>
+          </Box>
+
+          <Box pb={2}>
+            <Typography variant="h6" component="span" align="center">
+              Contact me at <Link href="mailto:developer.clear@gmail.com">developer.clear@gmail.com</Link>
+            </Typography>
+          </Box>
+
+          <SocialGroup />
         </Box>
       </Container>
     </Container>
