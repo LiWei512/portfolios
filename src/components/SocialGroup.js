@@ -23,6 +23,7 @@ const SocialGroup = () => {
     <Box display="flex">
       {data.site.siteMetadata.socials.map(media => (
         <IconButton
+          key={media.name}
           aria-label={media.name}
           edge={false}
           href={media.url}
