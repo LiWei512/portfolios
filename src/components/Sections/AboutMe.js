@@ -8,6 +8,8 @@ import Img from "gatsby-image"
 import { graphql, useStaticQuery, Link as GatsbyLink } from "gatsby"
 import Avatar from "@material-ui/core/Avatar"
 import Link from "@material-ui/core/Link"
+import { useTheme } from "@material-ui/core/styles"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 import SocialGroup from "../SocialGroup"
 
@@ -33,6 +35,8 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    textAlign: "center",
+    paddingTop: "4rem",
     // border: '1px solid white',
   },
   avatar: {
@@ -71,6 +75,8 @@ export default function AboutMe() {
 
   const data = useStaticQuery(query)
   const classes = useStyles()
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up("md"))
 
   return (
     <Container disableGutters maxWidth={false} className={classes.root}>
@@ -81,8 +87,17 @@ export default function AboutMe() {
           alt="Borys Lee"
         />
       </div>
-      <Container maxWidth={"lg"} className={classes.splashContent}>
-        <Box display="flex" flexDirection="column" alignItems="center">
+      <Container
+        disableGutters
+        maxWidth={"lg"}
+        className={classes.splashContent}
+      >
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          textAlign="center"
+        >
           <Box pb={4}>
             <Avatar className={classes.avatar}>
               <Img
@@ -93,25 +108,29 @@ export default function AboutMe() {
             </Avatar>
           </Box>
 
-          <Box pb={4}>
-            <Typography variant="h2" component="h1" align="center">
+          <Box pb={2}>
+            <Typography
+              variant={matches ? "h2" : "h5"}
+              component="h1"
+              align="center"
+            >
               <b>{data.site.siteMetadata.tagline}</b>
             </Typography>
           </Box>
 
-          <Box pb={4}>
+          <Box pb={2}>
             <Typography variant="h6" component="h6" align="center">
               <b>{data.site.siteMetadata.subtitle1}</b>
             </Typography>
           </Box>
 
-          <Box pb={4}>
+          <Box pb={2}>
             <Typography variant="h6" component="span" align="center">
               {data.site.siteMetadata.subtitle2}
             </Typography>
           </Box>
 
-          <Box pb={2}>
+          <Box pb={1}>
             <Typography variant="h6" component="span" align="center">
               Contact me at{" "}
               <Link href="mailto:developer.clear@gmail.com">
@@ -122,7 +141,7 @@ export default function AboutMe() {
 
           <SocialGroup />
 
-          <Box pt={4} pb={2}>
+          <Box pt={2} pb={2}>
             <GatsbyLink to="/projects" style={{ textDecoration: "none" }}>
               <Button variant="contained" color="primary" size="large">
                 Projects I have worked
