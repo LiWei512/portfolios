@@ -3,8 +3,9 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 import Img from "gatsby-image";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link as GatsbyLink } from "gatsby";
 import Avatar from '@material-ui/core/Avatar';
 import Link from '@material-ui/core/Link';
 
@@ -13,20 +14,6 @@ import SocialGroup from '../SocialGroup';
 const useStyles = makeStyles(theme => ({
   root: {
     height: '100vh',
-  },
-  leftPaper: {
-    minHeight: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '1rem',
-  },
-  rightPaper: {
-    minHeight: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    padding: '1rem',
   },
   splashImageWrapper: {
     top: 0,
@@ -57,18 +44,26 @@ const useStyles = makeStyles(theme => ({
 export default function AboutMe() {
   const query = graphql`
     query {
-      file(relativePath: { eq: "landscape.jpg" }) {
+      background: file(relativePath: { eq: "landscape.jpg" }) {
         childImageSharp {
-          # Specify a fixed image and fragment.
-          # The default width is 400 pixels
           fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
       }
+      avatar: file(relativePath: { eq: "labtocat.png" }) {
+        childImageSharp {
+          fixed(width: 160, height: 160) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       site {
         siteMetadata {
-          description
+          tagline
+          subtitle1
+          subtitle2
+          email
         }
       }
     }
@@ -82,7 +77,7 @@ export default function AboutMe() {
       <div className={classes.splashImageWrapper}>
         <Img
           className={classes.splashImage}
-          fluid={data.file.childImageSharp.fluid}
+          fluid={data.background.childImageSharp.fluid}
           alt="Borys Lee"
         />
       </div>
@@ -90,34 +85,49 @@ export default function AboutMe() {
         <Box display="flex" flexDirection="column" alignItems="center">
 
           <Box pb={4}>
-            <Avatar alt="Remy Sharp" src="https://i.pravatar.cc/128" className={classes.avatar} />
+            <Avatar className={classes.avatar} >
+              <Img
+                // className={classes.splashImage}
+                fixed={data.avatar.childImageSharp.fixed}
+                alt="Borys Lee"
+              />
+            </Avatar>
           </Box>
 
           <Box pb={4}>
             <Typography variant="h2" component="h1" align="center">
-              <b>Learn to Create, Learn to Innovate</b>
+              <b>{data.site.siteMetadata.tagline}</b>
             </Typography>
           </Box>
 
           <Box pb={4}>
             <Typography variant="h6" component="h6" align="center">
-              <b>This is Borys Lee, full-stack developer and crypto enthusiast</b>
+              <b>{data.site.siteMetadata.subtitle1}</b>
             </Typography>
           </Box>
 
           <Box pb={4}>
             <Typography variant="h6" component="span" align="center">
-              I am a freelancer based in Shenyang, Liaoning, China.
-          </Typography>
+              {data.site.siteMetadata.subtitle2}
+            </Typography>
           </Box>
 
           <Box pb={2}>
             <Typography variant="h6" component="span" align="center">
-              Contact me at <Link href="mailto:developer.clear@gmail.com">developer.clear@gmail.com</Link>
+              Contact me at <Link href="mailto:developer.clear@gmail.com">{data.site.siteMetadata.email}</Link>
             </Typography>
           </Box>
 
           <SocialGroup />
+
+          <Box pt={4} pb={2}>
+            <GatsbyLink to="/projects" style={{ textDecoration: 'none' }}>
+              <Button variant="contained" color="primary" size="large">
+                Projects I have worked
+              </Button>
+            </GatsbyLink>
+          </Box>
+
         </Box>
       </Container>
     </Container>

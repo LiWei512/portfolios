@@ -3,6 +3,10 @@ const { faTwitter, faLinkedin, faStackOverflow, faGithub } = require('@fortaweso
 module.exports = {
   pathPrefix: "/portfolios",
   siteMetadata: {
+    tagline: 'Learn to Create, Learn to Innovate',
+    subtitle1: 'This is Borys Lee, full-stack developer and crypto enthusiast',
+    subtitle2: 'I am a freelancer based in Shenyang, Liaoning, China.',
+    email: 'developer.clear@gmail.com',
     title: `Borys Lee`,
     description: `
       Borys Lee is a full-stack web developer with 1 year of game development experience and 2 years of full-stack experience.
