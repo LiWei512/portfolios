@@ -73,8 +73,8 @@ export default function Testimonials() {
 
         <Box mb={4}>
           <Slider {...settings}>
-            {testimonials.map(testimonial => (
-              <div>
+            {testimonials.map((testimonial, index) => (
+              <div key={index}>
                 <Box
                   display="flex"
                   flexDirection="column"
