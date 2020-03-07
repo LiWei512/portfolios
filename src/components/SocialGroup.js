@@ -1,19 +1,19 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import IconButton from '@material-ui/core/IconButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import IconButton from "@material-ui/core/IconButton"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    listStyle: 'none',
-    display: 'inline-flex',
+    listStyle: "none",
+    display: "inline-flex",
     paddingLeft: 0,
   },
-}));
+}))
 
 const SocialGroup = () => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   const data = useStaticQuery(graphql`
     query MyQuery {
@@ -27,7 +27,7 @@ const SocialGroup = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <ul className={classes.root}>

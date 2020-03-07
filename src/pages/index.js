@@ -1,9 +1,9 @@
 import React from "react"
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import LifeTimeline from "../components/Sections/LifeTimeline";
-import Testimonials from "../components/Sections/Testimonials";
-import AboutMe from "../components/Sections/AboutMe";
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import LifeTimeline from "../components/Sections/LifeTimeline"
+import Testimonials from "../components/Sections/Testimonials"
+import AboutMe from "../components/Sections/AboutMe"
 
 const IndexPage = ({ data }) => {
   return (
@@ -16,4 +16,4 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export default IndexPage;
+export default IndexPage

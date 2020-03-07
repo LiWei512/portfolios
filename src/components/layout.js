@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { useTheme } from "@material-ui/core";
+import React from "react"
+import PropTypes from "prop-types"
+import { useTheme } from "@material-ui/core"
 
-import Header from "./header";
-import Footer from './footer';
+import Header from "./header"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
-  const theme = useTheme();
+  const theme = useTheme()
   return (
     <>
       <Header />
