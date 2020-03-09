@@ -10,8 +10,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="BorysLee" />
       <AboutMe />
-      <LifeTimeline />
       <Testimonials />
+      <LifeTimeline />
     </Layout>
   )
 }
