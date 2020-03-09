@@ -1,23 +1,41 @@
 [
   {
     "logo": "./images/logos/nrl.png",
-    "title": "Fullstack developer",
-    "subtitle": "San Franscisco, California",
-    "description": "I worked as a full-stack developer in this company.",
+    "title": "Full Stack Developer",
+    "subtitle": "No Rest Labs",
+    "subtitle1": "San Franscisco, California",
+    "description": "Work as a full stack developer in this company.",
     "date": "Apr 2019 - present"
   },
   {
-    "logo": "./images/logos/64.png",
-    "title": "Fullstack developer",
-    "subtitle": "Shenyang, Liaoning, China",
-    "description": "I worked as a full-stack developer in this company.",
+    "logo": "./images/logos/upwork.png",
+    "title": "Full Stack Developer",
+    "subtitle": "Upwork",
+    "subtitle1": "Upwork.com",
+    "description": "Worked as a full stack developer contractor.",
+    "date": "Jan 2019 - Apr 2019"
+  },
+  {
+    "logo": "./images/logos/limond.jpg",
+    "title": "Full Stack Developer",
+    "subtitle": "SHENYANG LIMOND INDUSTRIAL CO., LTD.",
+    "subtitle1": "Shenyang, Liaoning, China",
+    "description": "Worked as a full stack developer in this company.",
     "date": "Jun 2018 - Dec 2018"
   },
   {
-    "logo": "./images/logos/64.png",
-    "title": "Unity developer",
-    "subtitle": "Shenyang, Liaoning, China",
-    "description": "I learned a lot about computer game concepts, 2D games, 3D games, game engines, game characteristics of various genres, and the Unity game platform.",
+    "logo": "./images/logos/limond.jpg",
+    "title": "Mobile Game Developer",
+    "subtitle": "SHENYANG LIMOND INDUSTRIAL CO., LTD.",
+    "subtitle1": "Shenyang, Liaoning, China",
+    "description": "",
     "date": "Jan 2018 - Jun 2018"
+  },
+  {
+    "logo": "./images/logos/gionee.png",
+    "title": "Intern",
+    "subtitle": "China",
+    "description": "Worked on mobile testing, QA, tester, testing, manual testing.",
+    "date": "Jan 2017 - Apr 2017"
   }
 ]
