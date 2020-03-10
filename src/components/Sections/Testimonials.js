@@ -10,12 +10,6 @@ import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    borderColor: theme.palette.background.default,
-    borderWidth: 1,
-    borderStyle: "solid",
-    padding: "2rem 1.5rem",
-  },
   avatar: {
     width: theme.spacing(12),
     height: theme.spacing(12),
@@ -57,14 +51,13 @@ export default function Testimonials() {
   }
 
   return (
-    <Container disableGutters maxWidth={false} className={classes.root}>
-      <Container maxWidth={"md"}>
+    <Container maxWidth={"md"}>
+      <Box paddingY={8}>
         <Box p={2}>
           <Typography variant="h4" align="center">
             Testimonials
           </Typography>
         </Box>
-
         <Box p={2}>
           <Typography variant="h5" align="center">
             People I've worked with have said some nice things...
@@ -116,7 +109,7 @@ export default function Testimonials() {
             ))}
           </Slider>
         </Box>
-      </Container>
+      </Box>
     </Container>
   )
 }
