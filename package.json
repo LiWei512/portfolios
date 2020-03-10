@@ -29,7 +29,8 @@
     "react-slick": "^0.25.2",
     "react-vertical-timeline-component": "^2.5.0",
     "slick-carousel": "^1.8.1",
-    "typeface-roboto": "^0.0.75"
+    "typeface-roboto": "^0.0.75",
+    "typeface-rubik": "^0.0.72"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "2.x",
