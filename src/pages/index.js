@@ -5,12 +5,14 @@ import LifeTimeline from "../components/Sections/LifeTimeline"
 import Testimonials from "../components/Sections/Testimonials"
 import AboutMe from "../components/Sections/AboutMe"
 import Bio from "../components/Sections/Bio"
+import Summary from "../components/Sections/Summary"
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="BorysLee" />
       <AboutMe />
+      <Summary />
       <Testimonials />
       <LifeTimeline />
       <Bio />
