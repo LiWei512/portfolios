@@ -10,8 +10,14 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles(() => ({
+  noPadding: { width: '100% !important' }
+}));
 
 export default function LifeTimeline() {
+  const classes = useStyles();
   const data = useStaticQuery(graphql`
     query {
       allExperiencesJson {
@@ -52,8 +58,8 @@ export default function LifeTimeline() {
   `)
 
   return (
-    <Container maxWidth={"lg"}>
-      <VerticalTimeline layout="1-column">
+    <Container maxWidth={"md"}>
+      <VerticalTimeline layout="1-column" className={classes.noPadding}>
         {data.allExperiencesJson.edges.map((item, index) => (
           <VerticalTimelineElement
             key={index}
