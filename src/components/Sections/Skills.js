@@ -60,11 +60,11 @@ export default function Skills() {
                     <Typography variant="h6">{node.title}</Typography>
                   </Box>
 
-                  <Box py={2} textAlign="center">
+                  {/* <Box py={2} textAlign="center">
                     <Typography variant="body1" align="center">
                       {node.desc}
                     </Typography>
-                  </Box>
+                  </Box> */}
 
                   <Box py={2}>
                     <Typography variant="h6">Skills</Typography>
