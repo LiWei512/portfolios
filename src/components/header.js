@@ -99,6 +99,7 @@ const Header = props => {
       <HideOnScroll {...props}>
         <AppBar
           className={trigger ? classes.appBar : classes.transparentAppBar}
+          elevation={0}
         >
           <Toolbar className={classes.toolbar}>
             <Img
