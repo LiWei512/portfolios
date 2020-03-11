@@ -21,6 +21,7 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-theme-material-ui": "^1.0.8",
     "gatsby-transformer-json": "^2.2.26",
+    "gatsby-transformer-remark": "^2.6.56",
     "gatsby-transformer-sharp": "^2.3.7",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

@@ -80,6 +80,7 @@ module.exports = {
         path: "./data/",
       },
     },
+    "gatsby-transformer-remark",
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import LifeTimeline from "../components/Sections/LifeTimeline"
 import Testimonials from "../components/Sections/Testimonials"
 import AboutMe from "../components/Sections/AboutMe"
+import Bio from "../components/Sections/Bio"
 
 const IndexPage = ({ data }) => {
   return (
@@ -12,6 +13,7 @@ const IndexPage = ({ data }) => {
       <AboutMe />
       <Testimonials />
       <LifeTimeline />
+      <Bio />
     </Layout>
   )
 }
