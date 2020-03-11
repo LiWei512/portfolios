@@ -1,14 +1,13 @@
 import React from "react"
-import {
-  Container,
-  Typography,
-  Box,
-  Paper,
-  Grid,
-  Divider,
-} from "@material-ui/core"
-import SkillBar from "../SkillBar"
 import { graphql, useStaticQuery } from "gatsby"
+
+import Container from "@material-ui/core/Container"
+import Typography from "@material-ui/core/Typography"
+import Box from "@material-ui/core/Box"
+import Paper from "@material-ui/core/Paper"
+import Grid from "@material-ui/core/Grid"
+
+import SkillBar from "../SkillBar"
 
 export default function Skills() {
   const query = graphql`
@@ -40,50 +39,48 @@ export default function Skills() {
         <Paper>
           <Grid container>
             {data.allSkillsJson.edges.map(({ node }) => (
-              <>
-                <Grid item sm={4}>
-                  <Box
-                    p={2}
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                  >
-                    <Box py={2}>
-                      <figure>
-                        <img
-                          src={node.icon.publicURL}
-                          alt="Trulli"
-                          style={{ width: 64, height: 64 }}
-                        />
-                      </figure>
-                    </Box>
-
-                    <Box py={2}>
-                      <Typography variant="h6">{node.title}</Typography>
-                    </Box>
-
-                    <Box py={2} textAlign="center">
-                      <Typography variant="body" align="center">
-                        {node.desc}
-                      </Typography>
-                    </Box>
-
-                    <Box py={2}>
-                      <Typography variant="h6">Skills</Typography>
-                    </Box>
-
-                    <Box py={2}>
-                      <Grid container spacing={2}>
-                        {node.skills.map(skill => (
-                          <Grid item xs={12}>
-                            <SkillBar type={skill.type} level={skill.level} />
-                          </Grid>
-                        ))}
-                      </Grid>
-                    </Box>
+              <Grid item sm={4} key={node.id}>
+                <Box
+                  p={2}
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
+                >
+                  <Box py={2}>
+                    <figure>
+                      <img
+                        src={node.icon.publicURL}
+                        alt="Trulli"
+                        style={{ width: 64, height: 64 }}
+                      />
+                    </figure>
                   </Box>
-                </Grid>
-              </>
+
+                  <Box py={2}>
+                    <Typography variant="h6">{node.title}</Typography>
+                  </Box>
+
+                  <Box py={2} textAlign="center">
+                    <Typography variant="body1" align="center">
+                      {node.desc}
+                    </Typography>
+                  </Box>
+
+                  <Box py={2}>
+                    <Typography variant="h6">Skills</Typography>
+                  </Box>
+
+                  <Box py={2}>
+                    <Grid container spacing={2}>
+                      {node.skills.map((skill, index) => (
+                        <Grid item xs={12} key={index}>
+                          <SkillBar type={skill.type} level={skill.level} />
+                        </Grid>
+                      ))}
+                    </Grid>
+                  </Box>
+                </Box>
+              </Grid>
             ))}
           </Grid>
         </Paper>
