@@ -80,7 +80,7 @@ const Header = props => {
           title
         }
       }
-      file(relativePath: { eq: "gatsby-icon.png" }) {
+      file(relativePath: { eq: "book.png" }) {
         childImageSharp {
           # Specify a fixed image and fragment.
           # The default width is 400 pixels
