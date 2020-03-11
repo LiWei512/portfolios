@@ -5,15 +5,15 @@ import { createMuiTheme } from "@material-ui/core/styles"
 const theme = createMuiTheme({
   typography: {
     fontFamily: [
-      'Rubik',
-      'Roboto',
+      "Rubik",
+      "Roboto",
       '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
+      "Arial",
+      "sans-serif",
       '"Apple Color Emoji"',
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
-    ].join(','),
+    ].join(","),
   },
   palette: {
     primary: {

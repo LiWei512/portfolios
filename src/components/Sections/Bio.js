@@ -1,11 +1,11 @@
-import React from 'react'
-import { Container, Typography, Box } from '@material-ui/core'
-import { graphql, useStaticQuery } from 'gatsby'
+import React from "react"
+import { Container, Typography, Box } from "@material-ui/core"
+import { graphql, useStaticQuery } from "gatsby"
 
 export default function Bio() {
   const query = graphql`
     query {
-      markdownRemark(fileAbsolutePath: {regex: "/bio.md/"}) {
+      markdownRemark(fileAbsolutePath: { regex: "/bio.md/" }) {
         id
         html
         frontmatter {
@@ -13,14 +13,13 @@ export default function Bio() {
         }
       }
     }
-  `;
+  `
 
-  const data = useStaticQuery(query);
+  const data = useStaticQuery(query)
 
   return (
     <Container maxWidth="md">
       <Box paddingY={8}>
-
         <Box p={2}>
           <Typography variant="h4" align="center">
             {data.markdownRemark.frontmatter.title}
@@ -28,10 +27,14 @@ export default function Bio() {
         </Box>
 
         <Box p={2}>
-          <Typography variant="h6" component="div" align="center" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}>
-          </Typography>
+          <Typography
+            variant="h6"
+            component="div"
+            align="center"
+            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+          ></Typography>
         </Box>
       </Box>
-    </Container >
+    </Container>
   )
 }

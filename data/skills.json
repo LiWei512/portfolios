@@ -1,0 +1,103 @@
+[
+  {
+    "icon": "./images/svgs/code.svg",
+    "title": "Front End Developer",
+    "desc": "I value simple content structure, clean design patterns, and thoughtful interactions.",
+    "skills": [
+      {
+        "type": "React",
+        "level": "80"
+      },
+      {
+        "type": "Redux",
+        "level": "80"
+      },
+      {
+        "type": "Gatsby",
+        "level": "80"
+      },
+      {
+        "type": "Next",
+        "level": "60"
+      },
+      {
+        "type": "Create-React-App",
+        "level": "80"
+      }
+    ]
+  },
+  {
+    "icon": "./images/svgs/code.svg",
+    "title": "Back End Developer",
+    "desc": "I value simple content structure, clean design patterns, and thoughtful interactions.",
+    "skills": [
+      {
+        "type": "Node.js",
+        "level": "65"
+      },
+      {
+        "type": "Express.js",
+        "level": "65"
+      },
+      {
+        "type": "Sequelize ORM",
+        "level": "65"
+      },
+      {
+        "type": "PHP",
+        "level": "80"
+      },
+      {
+        "type": "CodeIgniter",
+        "level": "80"
+      },
+      {
+        "type": "Laravel",
+        "level": "80"
+      },
+      {
+        "type": "MySQL",
+        "level": "80"
+      },
+      {
+        "type": "PostgreSQL",
+        "level": "80"
+      },
+      {
+        "type": "MongoDB",
+        "level": "80"
+      }
+    ]
+  },
+  {
+    "icon": "./images/svgs/blockchain.svg",
+    "title": "Ethereum Developer",
+    "desc": "I value simple content structure, clean design patterns, and thoughtful interactions.",
+    "skills": [
+      {
+        "type": "Blockchain",
+        "level": "60"
+      },
+      {
+        "type": "Ethereum",
+        "level": "80"
+      },
+      {
+        "type": "Solidity",
+        "level": "60"
+      },
+      {
+        "type": "Web3.js",
+        "level": "80"
+      },
+      {
+        "type": "Truffle",
+        "level": "60"
+      },
+      {
+        "type": "Ganache",
+        "level": "100"
+      }
+    ]
+  }
+]
