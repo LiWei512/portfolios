@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
       <AboutMe />
       <Summary />
       <Skills />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <LifeTimeline />
       <Bio />
     </Layout>

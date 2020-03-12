@@ -3,16 +3,16 @@ import { Container, Typography, Box } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   bio: {
     "& a": {
-      color: theme.palette.text.primary
-    }
-  }
+      color: theme.palette.text.primary,
+    },
+  },
 }))
 
 export default function Bio() {
-  const classes = useStyles();
+  const classes = useStyles()
   const query = graphql`
     query {
       markdownRemark(fileAbsolutePath: { regex: "/bio.md/" }) {

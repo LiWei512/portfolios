@@ -37,6 +37,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: 12,
     marginBottom: 12,
   },
+  link: {
+    color: theme.palette.text.primary,
+  },
 }))
 
 export default function ProjectModal(props) {
@@ -153,19 +156,26 @@ export default function ProjectModal(props) {
           </ul>
         </Box>
 
-        <Box my={2}>
-          <Typography
-            className={classes.caption}
-            variant="caption"
-            component="strong"
-            display="block"
-          >
-            URL
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            {project.url}
-          </Typography>
-        </Box>
+        {project.url && (
+          <Box my={2}>
+            <Typography
+              className={classes.caption}
+              variant="caption"
+              component="strong"
+              display="block"
+            >
+              URL
+            </Typography>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.link}
+            >
+              {project.url}
+            </a>
+          </Box>
+        )}
       </DialogContent>
     </Dialog>
   )

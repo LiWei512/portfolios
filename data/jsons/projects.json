@@ -1,7 +1,7 @@
 [
   {
     "id": "0",
-    "title": "https://boryslee111.github.io/portfolios/projects",
+    "title": "My personal site",
     "coverImage": "../images/projects/portfolio/cover.png",
     "images": [
       "../images/projects/portfolio/screencapture-boryslee111-github-io-portfolios-2020-03-13-00_15_24.png",
@@ -26,7 +26,7 @@
       "Create a my personal logo",
       "Use Material UI layout for responsive design"
     ],
-    "url": "https://boryslee111.github.io/portfolios/projects"
+    "url": "https://boryslee111.github.io/portfolios"
   },
   {
     "id": "1",
@@ -84,7 +84,7 @@
   {
     "id": "3",
     "title": "SHENYANG LIMOND INDUSTRIAL CO., LTD ERP",
-    "coverImage": "../images/projects/xchange/screencapture-localhost-3000-2020-02-21-04_45_01.png",
+    "coverImage": "../images/projects/erp/cover.png",
     "images": [],
     "skills": [
       "Javascript",
@@ -105,7 +105,6 @@
       "Write unit test code to ensure the system.",
       "Write a scheduling algorithm.",
       "Use AJAX not to reload pages."
-    ],
-    "url": "https://turncoin.io"
+    ]
   }
 ]

@@ -68,7 +68,7 @@ const ProjectsPage = ({ data }) => {
                           to={`/projects/${li.id}`}
                         >
                           Show More
-                      </Link>
+                        </Link>
                       </Grid>
                     </Grid>
                   </Grid>
