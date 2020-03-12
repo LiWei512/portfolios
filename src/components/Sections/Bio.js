@@ -1,8 +1,18 @@
 import React from "react"
 import { Container, Typography, Box } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
+import { makeStyles } from "@material-ui/core/styles"
+
+const useStyles = makeStyles((theme) => ({
+  bio: {
+    "& a": {
+      color: theme.palette.text.primary
+    }
+  }
+}))
 
 export default function Bio() {
+  const classes = useStyles();
   const query = graphql`
     query {
       markdownRemark(fileAbsolutePath: { regex: "/bio.md/" }) {
@@ -32,6 +42,7 @@ export default function Bio() {
             component="div"
             align="center"
             dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+            className={classes.bio}
           ></Typography>
         </Box>
       </Box>

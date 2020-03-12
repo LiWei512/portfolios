@@ -133,8 +133,8 @@ export default function AboutMe() {
           <Box pb={1}>
             <Typography variant="h6" component="span" align="center">
               Contact me at{" "}
-              <Link href="mailto:developer.clear@gmail.com">
-                {data.site.siteMetadata.email}
+              <Link href="mailto:developer.clear@gmail.com" color="textPrimary">
+                <strong>{data.site.siteMetadata.email}</strong>
               </Link>
             </Typography>
           </Box>
