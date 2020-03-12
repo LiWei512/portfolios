@@ -12,6 +12,9 @@ import useMediaQuery from "@material-ui/core/useMediaQuery"
 import { useTheme } from "@material-ui/core/styles"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import IconButton from "@material-ui/core/IconButton"
+import ArrowBackIcon from "@material-ui/icons/ArrowBack"
+import Link from "@material-ui/core/Link"
 
 const useStyles = makeStyles(theme => ({
   caption: {
@@ -68,7 +71,7 @@ export default function ProjectModal(props) {
   let edge = data.allProjectsJson.edges.find(edge => edge.node.id === projectId)
 
   let project = edge.node
-  console.log(project)
+
   return (
     <Dialog
       fullScreen={fullScreen}
@@ -78,7 +81,16 @@ export default function ProjectModal(props) {
       onClose={onClose}
       aria-labelledby="responsive-dialog-title"
     >
-      <DialogTitle id="responsive-dialog-title">{project.title}</DialogTitle>
+      <DialogTitle
+        id="responsive-dialog-title"
+        disableTypography={true}
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <IconButton arial-label="back" onClick={onClose}>
+          <ArrowBackIcon />
+        </IconButton>
+        <Typography variant="h6">{project.title}</Typography>
+      </DialogTitle>
       <DialogContent>
         {project.images.map((image, index) => (
           <Img

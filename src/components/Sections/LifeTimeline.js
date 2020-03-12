@@ -98,11 +98,10 @@ export default function LifeTimeline() {
               </Box>
             </Box>
             <ul>
-              {
-                item.node.details && item.node.details.map((detail, index) => (
+              {item.node.details &&
+                item.node.details.map((detail, index) => (
                   <li key={index}>{detail}</li>
-                ))
-              }
+                ))}
             </ul>
           </VerticalTimelineElement>
         ))}
@@ -137,11 +136,10 @@ export default function LifeTimeline() {
               </Box>
             </Box>
             <ul>
-              {
-                item.node.details && item.node.details.map((detail, index) => (
+              {item.node.details &&
+                item.node.details.map((detail, index) => (
                   <li key={index}>{detail}</li>
-                ))
-              }
+                ))}
             </ul>
           </VerticalTimelineElement>
         ))}
