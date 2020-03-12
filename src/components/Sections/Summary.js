@@ -5,11 +5,11 @@ import { graphql, useStaticQuery } from "gatsby"
 export default function Summary() {
   const query = graphql`
     query {
-      markdownRemark(fileAbsolutePath: { regex: "/summary.md/" }) {
-        id
-        html
-        frontmatter {
+      site {
+        siteMetadata {
           title
+          description
+          author
         }
       }
     }
@@ -22,7 +22,7 @@ export default function Summary() {
       <Box paddingY={8}>
         <Box p={2}>
           <Typography variant="h4" align="center">
-            {data.markdownRemark.frontmatter.title}
+            {"Hi, I’m BorysLee. Nice to meet you."}
           </Typography>
         </Box>
 
@@ -31,7 +31,7 @@ export default function Summary() {
             variant="h6"
             component="div"
             align="center"
-            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+            dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.description }}
           ></Typography>
         </Box>
       </Box>

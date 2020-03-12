@@ -14,8 +14,8 @@ module.exports = {
     email: "developer.clear@gmail.com",
     title: `Borys Lee`,
     description: `
-      Borys Lee is a full-stack web developer with 1 year of game development experience and 2 years of full-stack experience.
-      His personal interests include cryptocurrency and game development, and he has worked toward these interests as a freelancer using various stacks including React, Node.js, Express, PHP, CodeIgniter, Laravel, C, C++, C# and Solidity.
+      Borys Lee is a full stack developer and a blockchain enthusiast. He began his career as a full stack developer since 2016.
+      His personal interests include blockchain, cryptocurrency, game development, web development and he has worked toward these interests as a freelancer using various stacks including React, Node.js, Express.js, PHP, CodeIgniter, Laravel, C, C++, C#, and Solidity.
     `,
     author: `@boryslee`,
     socials: [
