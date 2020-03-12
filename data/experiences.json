@@ -5,6 +5,19 @@
     "subtitle": "No Rest Labs",
     "subtitle1": "San Franscisco, California",
     "description": "Work as a full stack developer in this company.",
+    "details": [
+      "Work closely with testing team members to design and develop robust solutions to meet client requirements for functionality, scalability, and performance.",
+      "Implement the turncoin.io marketing landing page(AntD, React, Less, ReactRouter).",
+      "Implement the turncoin.io admin pages for users, news, events, orders, assets management(React, Redux, Redux-Saga).",
+      "Write rich-featured action creators and corresponding reducers.",
+      "Use Fetch API to call Rest APIs to fetch data and update the states in the store of Redux.",
+      "Involve in the design and development of Rest APIs and services to interact with a data storage layer.(Node.js, Express.js, MySQL, SequelizeORM).",
+      "Deploy the turncoin.io secure Rest APIs server using Nginx, Let's Encrypt and SSH on AWS EC2.",
+      "Use Draft.js rich text editor framework for news WYSIWYG.",
+      "Build several responsive email templates for order notifications.",
+      "Use SendGrid email service to send notification emails.",
+      "Work with Github and CircleCI continuous deployment environment."
+    ],
     "date": "Apr 2019 - present"
   },
   {
@@ -13,6 +26,7 @@
     "subtitle": "Upwork",
     "subtitle1": "Upwork.com",
     "description": "Worked as a full stack developer contractor.",
+    "details": ["Work as a full-stak developer contractor"],
     "date": "Jan 2019 - Apr 2019"
   },
   {
@@ -21,6 +35,16 @@
     "subtitle": "SHENYANG LIMOND INDUSTRIAL CO., LTD.",
     "subtitle1": "Shenyang, Liaoning, China",
     "description": "Worked as a full stack developer in this company.",
+    "details": [
+      "Analyze business requirements to translate functional requirements into technical specifications.",
+      "Develop human resources module in Enterprise Resource Planning (ERP) for this company.",
+      "Familiar with ExtJs framework.",
+      "Implement the business logic with a PHP CodeIgniter framework.",
+      "Write SQL queries.",
+      "Write unit test code to ensure the system.",
+      "Write a scheduling algorithm.",
+      "Use AJAX not to reload pages."
+    ],
     "date": "Jun 2018 - Dec 2018"
   },
   {
@@ -29,6 +53,17 @@
     "subtitle": "SHENYANG LIMOND INDUSTRIAL CO., LTD.",
     "subtitle1": "Shenyang, Liaoning, China",
     "description": "",
+    "details": [
+      "Study computer graphics principles and practices in depth.",
+      "Study computer game design concepts.",
+      "Research various game engine characteristics.",
+      "Research the characteristics of various game genres.",
+      "Research role-playing game characteristics.",
+      "Familiar with Unity game engine and game development using Unity.",
+      "Develop a game level maker and game configuration loader.",
+      "Implement game UIs using the NGUI package(Next Generation UI package).",
+      "Write game logic codes using C# programming language."
+    ],
     "date": "Jan 2018 - Jun 2018"
   },
   {
@@ -36,6 +71,7 @@
     "title": "Intern",
     "subtitle": "China",
     "description": "Worked on mobile testing, QA, tester, testing, manual testing.",
+    "details": ["Work on mobile testing, QA, tester, testing, manual testing."],
     "date": "Jan 2017 - Apr 2017"
   }
 ]

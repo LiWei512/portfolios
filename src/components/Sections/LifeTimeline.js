@@ -27,6 +27,7 @@ export default function LifeTimeline() {
             subtitle
             description
             date
+            details
             logo {
               childImageSharp {
                 fixed(width: 64, height: 64) {
@@ -44,6 +45,7 @@ export default function LifeTimeline() {
             subtitle
             description
             date
+            details
             logo {
               childImageSharp {
                 fixed(width: 64, height: 64) {
@@ -64,7 +66,7 @@ export default function LifeTimeline() {
           <VerticalTimelineElement
             key={index}
             className="vertical-timeline-element--work"
-            // date={item.node.date}
+            date={item.node.date}
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={<WorkIcon />}
           >
@@ -95,14 +97,20 @@ export default function LifeTimeline() {
                 </h4>
               </Box>
             </Box>
-            <p>{item.node.description}</p>
+            <ul>
+              {
+                item.node.details && item.node.details.map((detail, index) => (
+                  <li key={index}>{detail}</li>
+                ))
+              }
+            </ul>
           </VerticalTimelineElement>
         ))}
         {data.allEducationsJson.edges.map((item, index) => (
           <VerticalTimelineElement
             key={index}
             className="vertical-timeline-element--education"
-            // date={item.node.date}
+            date={item.node.date}
             iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
             icon={<SchoolIcon />}
           >
@@ -128,7 +136,13 @@ export default function LifeTimeline() {
                 </h4>
               </Box>
             </Box>
-            <p>{item.node.description}</p>
+            <ul>
+              {
+                item.node.details && item.node.details.map((detail, index) => (
+                  <li key={index}>{detail}</li>
+                ))
+              }
+            </ul>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
