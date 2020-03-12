@@ -1,0 +1,82 @@
+[
+  {
+    "id": "0",
+    "title": "Multi.io",
+    "coverImage": "../images/projects/multi/cover.png",
+    "images": [
+      "../images/projects/multi/Screenshot_1.png",
+      "../images/projects/multi/screencapture-localhost-3000-en-trading-exchange-EOSBTC-2020-02-29-01_12_15.png",
+      "../images/projects/multi/screencapture-localhost-3000-en-trading-lending-BTC-2020-02-29-01_13_18.png"
+    ],
+    "skills": ["React", "Next.js", "Cypress", "E2E", "Test", "Mocha", "Chai"],
+    "description": "Multi is a margin-first Cryptocurrency exchange, built out of frustration with the lack of products, no user-centric development and transparency.",
+    "details": [
+      "Write an e2e cypress test for authentication and exchange features."
+    ],
+    "url": "https://multi.io"
+  },
+  {
+    "id": "1",
+    "title": "Turncoin.io",
+    "coverImage": "../images/projects/xchange/screencapture-localhost-3000-2020-02-21-04_45_01.png",
+    "images": [
+      "../images/projects/xchange/screencapture-localhost-3000-2020-02-21-04_45_01.png",
+      "../images/projects/xchange/screencapture-localhost-3000-backend-news-edit-73890aa5-a565-4861-a847-f9caf0c35aa1-2020-02-21-04_47_02.png",
+      "../images/projects/xchange/screencapture-localhost-3000-vision-2020-02-21-04_48_29.png",
+      "../images/projects/xchange/screencapture-localhost-3000-news-2020-02-21-04_53_17.png"
+    ],
+    "skills": [
+      "React",
+      "Create-React-App",
+      "Redux-Saga",
+      "AntD",
+      "Less",
+      "Node.js",
+      "Express.js",
+      "SequelizeORM",
+      "MySQL",
+      "SQL"
+    ],
+    "description": "TheXchange™ is a people-driven platform that helps individuals achieve their dreams while giving their fans a vehicle to support them and share in their success. Backing people by leveraging Blockchain technology. TheXchange™ provides the vehicle to pursue their heart’s desire - wherever they live in the world if they have talent, passion and the will to fight for a purpose-filled life. TurnCoin™ is a Mega-Security Token for TheXchange™ platform. This turncoin.io website is for marketing TurnCoin™ and for managing buying TurnCoin™ orders.",
+    "details": [
+      "Implement the turncoin.io marketing landing page(AntD, React, Less, ReactRouter).",
+      "Implement the turncoin.io admin pages for users, news, events, orders, assets management(React, Redux, Redux-Saga, AntD).",
+      "Write rich-featured action creators and corresponding reducers.",
+      "Use Fetch API to call Rest APIs to fetch data and update the states in the store of Redux.",
+      "Involve in the design and development of Rest APIs and services to interact with a data storage layer.(Node.js, Express.js, MySQL, SequelizeORM).",
+      "Deploy the turncoin.io secure Rest APIs server using Nginx, Let's Encrypt and SSH on AWS EC2.",
+      "Use Draft.js rich text editor framework for news WYSIWYG.",
+      "Build several responsive email templates for order notifications.",
+      "Use SendGrid email service to send notification emails.",
+      "Work with Github and CircleCI continuous deployment environment."
+    ],
+    "url": "https://turncoin.io"
+  },
+  {
+    "id": "2",
+    "title": "SHENYANG LIMOND INDUSTRIAL CO., LTD ERP",
+    "coverImage": "../images/projects/xchange/screencapture-localhost-3000-2020-02-21-04_45_01.png",
+    "images": [],
+    "skills": [
+      "Javascript",
+      "ExtJS",
+      "PHP",
+      "CodeIgniter Framework",
+      "SQL",
+      "MySQL",
+      "AJAX"
+    ],
+    "description": "Participated in SHENYANG LIMOND INDUSTRIAL CO., LTD ERP development.",
+    "details": [
+      "Analyze business requirements to translate functional requirements into technical specifications.",
+      "Develop human resources module in Enterprise Resource Planning (ERP) for this company.",
+      "Familiar with ExtJs framework.",
+      "Implement the business logic with a PHP CodeIgniter framework.",
+      "Write SQL queries.",
+      "Write unit test code to ensure the system.",
+      "Write a scheduling algorithm.",
+      "Use AJAX not to reload pages."
+    ],
+    "url": "https://turncoin.io"
+  }
+]

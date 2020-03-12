@@ -1,6 +1,6 @@
 [
   {
-    "logo": "./images/logos/NU.png",
+    "logo": "../images/logos/NU.png",
     "title": "Northeastern University(CN)",
     "subtitle": "Bachelor's degree, Information Technology",
     "description": "Focused on studying Information Technology and Economics",

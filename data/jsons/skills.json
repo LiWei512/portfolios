@@ -1,6 +1,6 @@
 [
   {
-    "icon": "./images/svgs/code.svg",
+    "icon": "../images/svgs/code.svg",
     "title": "Front End Developer",
     "desc": "I value simple content structure, clean design patterns, and thoughtful interactions.",
     "skills": [
@@ -27,7 +27,7 @@
     ]
   },
   {
-    "icon": "./images/svgs/code.svg",
+    "icon": "../images/svgs/code.svg",
     "title": "Back End Developer",
     "desc": "I like to know business flow in several industries.",
     "skills": [
@@ -70,7 +70,7 @@
     ]
   },
   {
-    "icon": "./images/svgs/blockchain.svg",
+    "icon": "../images/svgs/blockchain.svg",
     "title": "Ethereum Developer",
     "desc": "I love Ethereum because it is a global computer that anyone can access, a never down server, and an immutable ledger.",
     "skills": [

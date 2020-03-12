@@ -1,6 +1,6 @@
 [
   {
-    "logo": "./images/logos/nrl.png",
+    "logo": "../images/logos/nrl.png",
     "title": "Full Stack Developer",
     "subtitle": "No Rest Labs",
     "subtitle1": "San Franscisco, California",
@@ -21,7 +21,7 @@
     "date": "Apr 2019 - present"
   },
   {
-    "logo": "./images/logos/upwork.png",
+    "logo": "../images/logos/upwork.png",
     "title": "Full Stack Developer",
     "subtitle": "Upwork",
     "subtitle1": "Upwork.com",
@@ -30,7 +30,7 @@
     "date": "Jan 2019 - Apr 2019"
   },
   {
-    "logo": "./images/logos/limond.jpg",
+    "logo": "../images/logos/limond.jpg",
     "title": "Full Stack Developer",
     "subtitle": "SHENYANG LIMOND INDUSTRIAL CO., LTD.",
     "subtitle1": "Shenyang, Liaoning, China",
@@ -48,7 +48,7 @@
     "date": "Jun 2018 - Dec 2018"
   },
   {
-    "logo": "./images/logos/limond.jpg",
+    "logo": "../images/logos/limond.jpg",
     "title": "Mobile Game Developer",
     "subtitle": "SHENYANG LIMOND INDUSTRIAL CO., LTD.",
     "subtitle1": "Shenyang, Liaoning, China",
@@ -67,7 +67,7 @@
     "date": "Jan 2018 - Jun 2018"
   },
   {
-    "logo": "./images/logos/gionee.png",
+    "logo": "../images/logos/gionee.png",
     "title": "Intern",
     "subtitle": "China",
     "description": "Worked on mobile testing, QA, tester, testing, manual testing.",
