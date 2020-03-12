@@ -10,14 +10,14 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles(() => ({
-  noPadding: { width: '100% !important' }
-}));
+  noPadding: { width: "100% !important" },
+}))
 
 export default function LifeTimeline() {
-  const classes = useStyles();
+  const classes = useStyles()
   const data = useStaticQuery(graphql`
     query {
       allExperiencesJson {

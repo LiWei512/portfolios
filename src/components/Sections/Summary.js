@@ -31,7 +31,9 @@ export default function Summary() {
             variant="h6"
             component="div"
             align="center"
-            dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.description }}
+            dangerouslySetInnerHTML={{
+              __html: data.site.siteMetadata.description,
+            }}
           ></Typography>
         </Box>
       </Box>
