@@ -1,6 +1,35 @@
 [
   {
     "id": "0",
+    "title": "https://boryslee111.github.io/portfolios/projects",
+    "coverImage": "../images/projects/portfolio/cover.png",
+    "images": [
+      "../images/projects/portfolio/screencapture-boryslee111-github-io-portfolios-2020-03-13-00_15_24.png",
+      "../images/projects/portfolio/screencapture-boryslee111-github-io-portfolios-projects-1-2020-03-13-00_15_57.png",
+      "../images/projects/portfolio/screencapture-boryslee111-github-io-portfolios-projects-1-2020-03-13-00_17_45.png"
+    ],
+    "skills": [
+      "React",
+      "Gatsby",
+      "Material UI",
+      "GraphQL",
+      "Json",
+      "Markdown",
+      "Responsive Design"
+    ],
+    "description": "This project is my first personal project using gatsby. The color scheme is inspired by the material design use case shrine. Through developing this project, I have a great understanding of gatsby and graphql.",
+    "details": [
+      "Write graphql queries to fetch data from gatsby data layer",
+      "Familiar with Markdown Syntax",
+      "Implement website UI using Material UI",
+      "Research material design system",
+      "Create a my personal logo",
+      "Use Material UI layout for responsive design"
+    ],
+    "url": "https://boryslee111.github.io/portfolios/projects"
+  },
+  {
+    "id": "1",
     "title": "Multi.io",
     "coverImage": "../images/projects/multi/cover.png",
     "images": [
@@ -16,7 +45,7 @@
     "url": "https://multi.io"
   },
   {
-    "id": "1",
+    "id": "2",
     "title": "Turncoin.io",
     "coverImage": "../images/projects/xchange/screencapture-localhost-3000-2020-02-21-04_45_01.png",
     "images": [
@@ -53,7 +82,7 @@
     "url": "https://turncoin.io"
   },
   {
-    "id": "2",
+    "id": "3",
     "title": "SHENYANG LIMOND INDUSTRIAL CO., LTD ERP",
     "coverImage": "../images/projects/xchange/screencapture-localhost-3000-2020-02-21-04_45_01.png",
     "images": [],
