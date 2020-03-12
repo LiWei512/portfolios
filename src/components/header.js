@@ -132,6 +132,7 @@ const Header = props => {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
+      <Toolbar />
       {/* back-to-top-anchor */}
       <div id="back-to-top-anchor" />
       <ScrollTop {...props}>
