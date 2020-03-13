@@ -5,15 +5,43 @@
  */
 
 // You can delete this file if you're not using it
+const slug = require("slug")
+const path = require("path")
 
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage } = actions
-  // Only update the `/app` page.
-  if (page.path.match(/^\/projects/)) {
-    // page.matchPath is a special key that's used for matching pages
-    // with corresponding routes only on the client.
-    page.matchPath = "/projects/*"
-    // Update the page.
-    createPage(page)
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `ProjectsJson`) {
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug(node.title, { lower: true }),
+    })
   }
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    query {
+      allProjectsJson {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  result.data.allProjectsJson.edges.forEach(({ node }) => {
+    createPage({
+      path: `projects/${node.fields.slug}`,
+      component: path.resolve(`./src/templates/blog-project.js`),
+      context: {
+        slug: node.fields.slug,
+      },
+    })
+  })
 }

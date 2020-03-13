@@ -1,6 +1,5 @@
 [
   {
-    "id": "0",
     "title": "My personal site",
     "coverImage": "../images/projects/portfolio/cover.png",
     "images": [
@@ -29,7 +28,6 @@
     "url": "https://boryslee111.github.io/portfolios"
   },
   {
-    "id": "1",
     "title": "Multi.io",
     "coverImage": "../images/projects/multi/cover.png",
     "images": [
@@ -45,7 +43,6 @@
     "url": "https://multi.io"
   },
   {
-    "id": "2",
     "title": "Turncoin.io",
     "coverImage": "../images/projects/xchange/screencapture-localhost-3000-2020-02-21-04_45_01.png",
     "images": [
@@ -82,7 +79,6 @@
     "url": "https://turncoin.io"
   },
   {
-    "id": "3",
     "title": "SHENYANG LIMOND INDUSTRIAL CO., LTD ERP",
     "coverImage": "../images/projects/erp/cover.png",
     "images": [],
