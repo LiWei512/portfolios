@@ -35,11 +35,11 @@ export default function Skills() {
 
   return (
     <Container maxWidth="md">
-      <Box paddingY={8}>
+      <Box py={8}>
         <Paper>
           <Grid container>
             {data.allSkillsJson.edges.map(({ node }) => (
-              <Grid item sm={4} key={node.id}>
+              <Grid item xs={12} sm={4} key={node.id}>
                 <Box
                   p={2}
                   display="flex"
@@ -57,20 +57,16 @@ export default function Skills() {
                   </Box>
 
                   <Box py={2}>
-                    <Typography variant="h6">{node.title}</Typography>
-                  </Box>
-
-                  {/* <Box py={2} textAlign="center">
-                    <Typography variant="body1" align="center">
-                      {node.desc}
+                    <Typography variant="h6" align="center">
+                      {node.title}
                     </Typography>
-                  </Box> */}
+                  </Box>
 
                   <Box py={2}>
                     <Typography variant="h6">Skills</Typography>
                   </Box>
 
-                  <Box py={2}>
+                  <Box py={2} width="100%">
                     <Grid container spacing={2}>
                       {node.skills.map((skill, index) => (
                         <Grid item xs={12} key={index}>
