@@ -1,5 +1,5 @@
 ---
-title: "Hi, I’m Borys Lee. This story is about why I work on Information Technology."
+title: "Hi, I’m Borys Lee. This story is my short bio."
 date: "2020-3-11"
 ---
 
@@ -13,6 +13,6 @@ When I was looking for an opportunity after I studied Computer Science and Econo
 
 Now I am working on moving the blockchain technology to reality. So I keep on studying and working on Blockchain and Web development.
 
-Also, I continuously learn something new to be a innovator.
+Also, I continuously learn something new to change the world.
 
 [Contact me anytime when you have a great idea.](mailto:developer.clear@gmail.com)
