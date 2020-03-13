@@ -4,10 +4,10 @@ const {
   faStackOverflow,
   faGithub,
 } = require("@fortawesome/free-brands-svg-icons")
-
 module.exports = {
   pathPrefix: "/portfolios",
   siteMetadata: {
+    baseUrl: "https://boryslee111.github.io",
     tagline: "Learn to Create, Learn to Innovate",
     subtitle1: "This is Borys Lee, full-stack developer and crypto enthusiast",
     subtitle2: "I am a freelancer based in Shenyang, Liaoning, China.",
@@ -17,7 +17,7 @@ module.exports = {
       Borys Lee is a full stack developer and a blockchain enthusiast. He began his career as a full stack developer since 2016.
       His personal interests include blockchain, cryptocurrency, game development, web development and he has worked toward these interests as a freelancer using various stacks including React, Node.js, Express.js, PHP, CodeIgniter, Laravel, C, C++, C#, and Solidity.
     `,
-    author: `@boryslee`,
+    author: `@boryslee111`,
     socials: [
       {
         name: "linkedin",

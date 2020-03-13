@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography"
 import Img from "gatsby-image"
 import IconButton from "@material-ui/core/IconButton"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack"
-import { graphql, navigate, withPrefix } from "gatsby"
+import { graphql, navigate } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -42,10 +42,14 @@ const useStyles = makeStyles(theme => ({
 export default function ProjectModal(props) {
   const classes = useStyles()
   const project = props.data.projectsJson
-
+  const site = props.data.site
   return (
     <Layout>
-      <SEO title="Wow" />
+      <SEO
+        title={project.title}
+        description={project.description}
+        image={`${site.siteMetadata.baseUrl}${project.coverImage.publicURL}`}
+      />
       <Container maxWidth="lg">
         <Box py={2}>
           <Box style={{ display: "flex", alignItems: "center" }}>
@@ -148,6 +152,11 @@ export default function ProjectModal(props) {
 
 export const query = graphql`
   query($slug: String!) {
+    site {
+      siteMetadata {
+        baseUrl
+      }
+    }
     projectsJson(fields: { slug: { eq: $slug } }) {
       id
       skills
@@ -157,6 +166,9 @@ export const query = graphql`
       details
       fields {
         slug
+      }
+      coverImage {
+        publicURL
       }
       images {
         childImageSharp {
