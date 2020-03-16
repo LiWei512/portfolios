@@ -14,7 +14,7 @@ function SEO({ description, lang, meta, title, image }) {
   const data = useStaticQuery(
     graphql`
       query {
-        avatar: file(relativePath: { eq: "labtocat.png" }) {
+        avatar: file(relativePath: { eq: "cover.png" }) {
           publicURL
         }
         site {
