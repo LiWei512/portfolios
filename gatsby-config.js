@@ -1,9 +1,14 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const {
   faTwitter,
   faLinkedin,
   faStackOverflow,
   faGithub,
 } = require("@fortawesome/free-brands-svg-icons")
+
 module.exports = {
   pathPrefix: "/portfolios",
   siteMetadata: {
@@ -94,6 +99,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/book.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GATSBY_TRACKING_ID,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
