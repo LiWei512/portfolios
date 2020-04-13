@@ -22,7 +22,7 @@ export default function Summary() {
       <Box paddingY={8}>
         <Box p={2}>
           <Typography variant="h4" align="center">
-            {"Hi, I’m BorysLee. Nice to meet you."}
+            {"Hi, I’m Li Wei. Nice to meet you."}
           </Typography>
         </Box>
 

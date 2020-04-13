@@ -12,36 +12,36 @@ const {
 module.exports = {
   pathPrefix: "/portfolios",
   siteMetadata: {
-    baseUrl: "https://boryslee111.github.io",
+    baseUrl: "https://liwei512.github.io",
     tagline: "Learn to Create, Learn to Innovate",
-    subtitle1: "This is Borys Lee, full-stack developer and crypto enthusiast",
+    subtitle1: "This is Li Wei, full-stack developer and crypto enthusiast",
     subtitle2: "I am a freelancer based in Shenyang, Liaoning, China.",
     email: "developer.clear@gmail.com",
-    title: `Borys Lee`,
+    title: `Li Wei`,
     description: `
-      Borys Lee is a full stack developer and a blockchain enthusiast. He began his career as a full stack developer since 2016.
+      Li Wei is a full stack developer and a blockchain enthusiast. He began his career as a full stack developer since 2016.
       His personal interests include blockchain, cryptocurrency, game development, web development and he has worked toward these interests as a freelancer using various stacks including React, Node.js, Express.js, PHP, CodeIgniter, Laravel, C, C++, C#, and Solidity.
     `,
-    author: `@boryslee111`,
+    author: `@liwei512`,
     socials: [
       {
         name: "linkedin",
-        url: "https://linkedin.com/in/boryslee",
+        url: "https://linkedin.com/in/liwei512",
         icon: JSON.stringify(faLinkedin),
       },
       {
         name: "github",
-        url: "https://github.com/boryslee111",
+        url: "https://github.com/liwei512",
         icon: JSON.stringify(faGithub),
       },
       {
         name: "twitter",
-        url: "https://twitter.com/boryslee111",
+        url: "https://twitter.com/liwei512",
         icon: JSON.stringify(faTwitter),
       },
       {
         name: "stackoverflow",
-        url: "https://stackoverflow.com/users/11894804/borys-lee?tab=profile",
+        url: "https://stackoverflow.com/users/11894804/li-wei?tab=profile",
         icon: JSON.stringify(faStackOverflow),
       },
     ],

@@ -84,7 +84,7 @@ export default function AboutMe() {
         <Img
           className={classes.splashImage}
           fluid={data.background.childImageSharp.fluid}
-          alt="Borys Lee"
+          alt="Li Wei"
         />
       </div>
       <Container
@@ -103,7 +103,7 @@ export default function AboutMe() {
               <Img
                 // className={classes.splashImage}
                 fixed={data.avatar.childImageSharp.fixed}
-                alt="Borys Lee"
+                alt="Li Wei"
               />
             </Avatar>
           </Box>
