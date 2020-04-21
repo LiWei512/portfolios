@@ -3,7 +3,7 @@
   "private": true,
   "description": "This is a portfolios site built with gatsby",
   "version": "0.1.0",
-  "author": "LiWei <developer.clear@gmail.com>",
+  "author": "WeiLi <developer.clear@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
