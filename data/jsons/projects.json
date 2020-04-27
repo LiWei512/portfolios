@@ -1,5 +1,42 @@
 [
   {
+    "title": "Ruler app",
+    "coverImage": "../images/projects/ruler/cover.png",
+    "images": [
+      "../images/projects/ruler/1.png",
+      "../images/projects/ruler/2.png",
+      "../images/projects/ruler/3.png",
+      "../images/projects/ruler/4.png",
+      "../images/projects/ruler/5.png",
+      "../images/projects/ruler/6.png",
+      "../images/projects/ruler/7.png",
+      "../images/projects/ruler/8.png",
+      "../images/projects/ruler/9.png",
+      "../images/projects/ruler/10.png",
+      "../images/projects/ruler/11.png",
+      "../images/projects/ruler/12.png"
+    ],
+    "skills": [
+      "Ionic",
+      "Ionic Capacitor",
+      "Ionic Components",
+      "React",
+      "Create-React-App",
+      "Material UI",
+      "Typescript",
+      "Responsive Design"
+    ],
+    "description": "Ruler app is also called seamless mobility. Ruler app combines multiple free-floating mobility services(Share Now, Circ, Lime, Spin, Tier, Bird) like scooters and bikes.",
+    "details": [
+      "Implement i18n & i10n feature in this app",
+      "Test Ionic Capacitor in iOS & Android",
+      "Implement pixel-perfect mobile design",
+      "Work with typescript to ensure a robust codebase",
+      "Developed several robust React components"
+    ],
+    "url": "This app will be live soon"
+  },
+  {
     "title": "My personal site",
     "coverImage": "../images/projects/portfolio/cover.png",
     "images": [

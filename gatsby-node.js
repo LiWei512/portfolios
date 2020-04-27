@@ -36,12 +36,24 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allProjectsJson.edges.forEach(({ node }) => {
-    createPage({
-      path: `projects/${node.fields.slug}`,
-      component: path.resolve(`./src/templates/blog-project.js`),
-      context: {
-        slug: node.fields.slug,
-      },
-    })
+    console.log(node.fields.slug);
+    if (node.fields.slug === 'ruler-app') {
+      createPage({
+        path: `projects/${node.fields.slug}`,
+        component: path.resolve(`./src/templates/blog-project1.js`),
+        context: {
+          slug: node.fields.slug,
+        },
+      })
+    }
+    else {
+      createPage({
+        path: `projects/${node.fields.slug}`,
+        component: path.resolve(`./src/templates/blog-project.js`),
+        context: {
+          slug: node.fields.slug,
+        },
+      })
+    }
   })
 }
