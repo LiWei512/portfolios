@@ -105,7 +105,7 @@ const Header = props => {
             <Img
               className={classes.icon}
               fixed={data.file.childImageSharp.fixed}
-              alt="Li Wei"
+              alt="Wei Li"
             />
             <Typography
               variant="h6"

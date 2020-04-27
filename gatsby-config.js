@@ -12,31 +12,31 @@ const {
 module.exports = {
   pathPrefix: "/portfolios",
   siteMetadata: {
-    baseUrl: "https://liwei512.github.io",
+    baseUrl: "https://weili512.github.io",
     tagline: "Learn to Create, Learn to Innovate",
-    subtitle1: "This is Li Wei, full-stack developer and crypto enthusiast",
+    subtitle1: "This is Wei Li, full-stack developer and crypto enthusiast",
     subtitle2: "I am a freelancer based in Shenyang, Liaoning, China.",
     email: "developer.clear@gmail.com",
-    title: `Li Wei`,
+    title: `Wei Li`,
     description: `
-      Li Wei is a full stack developer and a blockchain enthusiast. He began his career as a full stack developer since 2016.
+      Wei Li is a full stack developer and a blockchain enthusiast. He began his career as a full stack developer since 2016.
       His personal interests include blockchain, cryptocurrency, game development, web development and he has worked toward these interests as a freelancer using various stacks including React, Node.js, Express.js, PHP, CodeIgniter, Laravel, C, C++, C#, and Solidity.
     `,
-    author: `@liwei512`,
+    author: `@weili512`,
     socials: [
       {
         name: "linkedin",
-        url: "https://linkedin.com/in/liwei512",
+        url: "https://www.linkedin.com/in/weili512/",
         icon: JSON.stringify(faLinkedin),
       },
       {
         name: "github",
-        url: "https://github.com/liwei512",
+        url: "https://github.com/WeiLi512",
         icon: JSON.stringify(faGithub),
       },
       {
         name: "twitter",
-        url: "https://twitter.com/liwei512",
+        url: "https://twitter.com/WeiLi512",
         icon: JSON.stringify(faTwitter),
       },
       {

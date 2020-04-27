@@ -11,7 +11,7 @@ import Skills from "../components/Sections/Skills"
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="LiWei" />
+      <SEO title="WeiLi" />
       <AboutMe />
       <Summary />
       <Skills />

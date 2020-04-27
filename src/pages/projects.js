@@ -44,7 +44,7 @@ const ProjectsPage = ({ data }) => {
                   >
                     <Img
                       fluid={li.coverImage.childImageSharp.fluid}
-                      alt="Li Wei"
+                      alt="Wei Li"
                       className={classes.image}
                     />
                   </ButtonBase>
