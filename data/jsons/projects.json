@@ -116,6 +116,30 @@
     "url": "https://turncoin.io"
   },
   {
+    "title": "Cheeky.ro",
+    "coverImage": "../images/projects/cheeky/1.png",
+    "images": [
+      "../images/projects/cheeky/1.png",
+      "../images/projects/cheeky/2.png",
+      "../images/projects/cheeky/3.png"
+    ],
+    "skills": [
+      "React",
+      "React Hooks",
+      "Howler.js",
+      "Create-React-App",
+      "Material-UI",
+      "Node.js",
+      "Express.js",
+      "SequelizeORM",
+      "MySQL",
+      "SQL"
+    ],
+    "description": "This a free service music that pulls from youtube and Soundcloud.",
+    "details": [],
+    "url": "https://cheeky.ro"
+  },
+  {
     "title": "SHENYANG LIMOND INDUSTRIAL CO., LTD ERP",
     "coverImage": "../images/projects/erp/cover.png",
     "images": [],
