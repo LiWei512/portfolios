@@ -43,7 +43,7 @@ export default function ProjectModal(props) {
   const classes = useStyles()
   const project = props.data.projectsJson
   const site = props.data.site
-  console.log(project)
+    
   return (
     <Layout>
       <SEO

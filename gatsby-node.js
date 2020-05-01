@@ -36,7 +36,6 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allProjectsJson.edges.forEach(({ node }) => {
-    console.log(node.fields.slug);
     if (node.fields.slug === 'ruler-app') {
       createPage({
         path: `projects/${node.fields.slug}`,
