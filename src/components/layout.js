@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { makeStyles } from "@material-ui/core"
-
+import { CssBaseline } from "@material-ui/core"
+import { makeStyles } from '@material-ui/styles'
 import Header from "./header"
 import Footer from "./footer"
 
@@ -22,6 +22,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className={classes.root}>
+      <CssBaseline />
       <Header />
       <main className={classes.main}>{children}</main>
       <Footer />

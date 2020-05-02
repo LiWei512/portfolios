@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "baseUrl": "./",
+    "module": "commonJS",
+    "target": "esnext",
+    "baseUrl": "./"
   },
   "exclude": ["node_modules", ".cache", "public"]
 }

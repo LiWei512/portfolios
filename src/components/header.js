@@ -1,17 +1,15 @@
 import React from "react"
-import { Link as GatsbyLink, navigate, useStaticQuery, graphql } from "gatsby"
-import AppBar from "@material-ui/core/AppBar"
-import CssBaseline from "@material-ui/core/CssBaseline"
-import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
+import { Link as GatsbyLink, navigate, useStaticQuery, graphql, withPrefix } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
-import Fab from "@material-ui/core/Fab"
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
+import {
+  AppBar, Toolbar, Typography, Fab, useScrollTrigger
+} from '@material-ui/core';
 import Img from "gatsby-image"
+import { useLocation } from '@reach/router'
 
 import HideOnScroll from "./HideOnScroll"
 import ScrollTop from "./ScrollTop"
-import useScrollTrigger from "@material-ui/core/useScrollTrigger"
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -36,10 +34,10 @@ const useStyles = makeStyles(theme => ({
   },
   navbar: {
     listStyle: "none",
-    textAlign: "right",
     marginLeft: "auto",
+    paddingLeft: 0,
     "& li": {
-      display: "inline",
+      display: 'inline',
       padding: "0 0.5rem",
     },
   },
@@ -71,34 +69,37 @@ const navLinks = [
   // },
 ]
 
-const Header = props => {
-  const classes = useStyles()
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
+const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
       }
-      file(relativePath: { eq: "book.png" }) {
-        childImageSharp {
-          # Specify a fixed image and fragment.
-          # The default width is 400 pixels
-          fixed(width: 36, height: 36) {
-            ...GatsbyImageSharpFixed
-          }
+    }
+    file(relativePath: { eq: "book.png" }) {
+      childImageSharp {
+        # Specify a fixed image and fragment.
+        # The default width is 400 pixels
+        fixed(width: 36, height: 36) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
-  `)
+  }
+`
+
+const Header = props => {
+  const classes = useStyles()
+  const location = useLocation();
+  const data = useStaticQuery(query)
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 0 })
+  const isHome = location.pathname === withPrefix('/');
 
   return (
-    <div>
-      <CssBaseline />
+    <>
       <HideOnScroll {...props}>
         <AppBar
-          className={trigger ? classes.appBar : classes.transparentAppBar}
+          className={(trigger || !isHome) ? classes.appBar : classes.transparentAppBar}
           elevation={0}
         >
           <Toolbar className={classes.toolbar}>
@@ -140,7 +141,7 @@ const Header = props => {
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
-    </div>
+    </>
   )
 }
 
