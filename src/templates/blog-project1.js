@@ -1,17 +1,12 @@
-import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import Container from "@material-ui/core/Container"
-import Box from "@material-ui/core/Box"
-import Paper from "@material-ui/core/Paper"
-import Grid from "@material-ui/core/Grid"
-import Typography from "@material-ui/core/Typography"
-import Img from "gatsby-image"
-import IconButton from "@material-ui/core/IconButton"
-import ArrowBackIcon from "@material-ui/icons/ArrowBack"
-import { graphql, navigate } from "gatsby"
+import React from "react";
+import { makeStyles } from "@material-ui/styles";
+import Img from "gatsby-image";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import { graphql, navigate } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { IconButton, Container, Box, Paper, Grid, Typography } from '@material-ui/core';
+import { Layout, SEO } from "components";
+
 
 const useStyles = makeStyles(theme => ({
   caption: {
@@ -37,13 +32,13 @@ const useStyles = makeStyles(theme => ({
   link: {
     color: theme.palette.text.primary,
   },
-}))
+}));
 
 export default function ProjectModal(props) {
-  const classes = useStyles()
-  const project = props.data.projectsJson
-  const site = props.data.site
-    
+  const classes = useStyles();
+  const project = props.data.projectsJson;
+  const site = props.data.site;
+
   return (
     <Layout>
       <SEO
@@ -157,7 +152,7 @@ export default function ProjectModal(props) {
         </Box>
       </Container>
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`
@@ -189,4 +184,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

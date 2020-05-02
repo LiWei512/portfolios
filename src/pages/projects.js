@@ -1,17 +1,10 @@
-import React from "react"
-import Container from "@material-ui/core/Container"
-import { makeStyles } from "@material-ui/core/styles"
-import Grid from "@material-ui/core/Grid"
-import { graphql, Link, withPrefix } from "gatsby"
-import Img from "gatsby-image"
-import Typography from "@material-ui/core/Typography"
-import { navigate } from "@reach/router"
-import Paper from "@material-ui/core/Paper"
-import ButtonBase from "@material-ui/core/ButtonBase"
-import Box from "@material-ui/core/Box"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from "react";
+import { makeStyles } from "@material-ui/styles";
+import { graphql, Link, withPrefix } from "gatsby";
+import Img from "gatsby-image";
+import { navigate } from "@reach/router";
+import { Box, ButtonBase, Paper, Typography, Grid, Container } from '@material-ui/core';
+import { Layout, SEO } from "components";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -22,10 +15,10 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     height: "100%",
   },
-}))
+}));
 
 const ProjectsPage = ({ data }) => {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Layout>
@@ -75,10 +68,10 @@ const ProjectsPage = ({ data }) => {
         </Box>
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default ProjectsPage
+export default ProjectsPage;
 
 export const query = graphql`
   query {
@@ -105,4 +98,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

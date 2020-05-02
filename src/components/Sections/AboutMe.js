@@ -1,17 +1,12 @@
-import React from "react"
-import Typography from "@material-ui/core/Typography"
-import { makeStyles } from "@material-ui/core/styles"
-import Container from "@material-ui/core/Container"
-import Box from "@material-ui/core/Box"
-import Button from "@material-ui/core/Button"
-import Img from "gatsby-image"
-import { graphql, useStaticQuery, Link as GatsbyLink } from "gatsby"
-import Avatar from "@material-ui/core/Avatar"
-import Link from "@material-ui/core/Link"
-import { useTheme } from "@material-ui/core/styles"
-import useMediaQuery from "@material-ui/core/useMediaQuery"
+import React from "react";
+import { makeStyles } from "@material-ui/styles";
+import Img from "gatsby-image";
+import { graphql, useStaticQuery, Link as GatsbyLink } from "gatsby";
+import { useTheme } from "@material-ui/core/styles";
 
-import SocialGroup from "../SocialGroup"
+import { Typography, Container, Box, Button, Avatar, Link, useMediaQuery } from '@material-ui/core';
+import { SocialGroup } from "components";
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     width: 160,
     height: 160,
   },
-}))
+}));
 
 export default function AboutMe() {
   const query = graphql`
@@ -71,12 +66,12 @@ export default function AboutMe() {
         }
       }
     }
-  `
+  `;
 
-  const data = useStaticQuery(query)
-  const classes = useStyles()
-  const theme = useTheme()
-  const matches = useMediaQuery(theme.breakpoints.up("md"))
+  const data = useStaticQuery(query);
+  const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <Container disableGutters maxWidth={false} className={classes.root}>
@@ -151,5 +146,5 @@ export default function AboutMe() {
         </Box>
       </Container>
     </Container>
-  )
+  );
 }

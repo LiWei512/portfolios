@@ -1,6 +1,5 @@
-import React from "react"
-import Box from "@material-ui/core/Box"
-import Typography from "@material-ui/core/Typography"
+import React from "react";
+import { Typography, Box } from "@material-ui/core";
 
 export default function SkillBar({ type, level }) {
   return (
@@ -9,5 +8,5 @@ export default function SkillBar({ type, level }) {
         <Typography variant="body1">{type}</Typography>
       </Box>
     </Box>
-  )
+  );
 }

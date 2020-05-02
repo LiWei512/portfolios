@@ -1,7 +1,7 @@
-import React from "react"
-import { Container, Typography, Box } from "@material-ui/core"
-import { graphql, useStaticQuery } from "gatsby"
-import { makeStyles } from "@material-ui/core/styles"
+import React from "react";
+import { Container, Typography, Box } from "@material-ui/core";
+import { graphql, useStaticQuery } from "gatsby";
+import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
   bio: {
@@ -9,10 +9,10 @@ const useStyles = makeStyles(theme => ({
       color: theme.palette.text.primary,
     },
   },
-}))
+}));
 
 export default function Bio() {
-  const classes = useStyles()
+  const classes = useStyles();
   const query = graphql`
     query {
       markdownRemark(fileAbsolutePath: { regex: "/bio.md/" }) {
@@ -23,9 +23,9 @@ export default function Bio() {
         }
       }
     }
-  `
+  `;
 
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
 
   return (
     <Container maxWidth="md">
@@ -47,5 +47,5 @@ export default function Bio() {
         </Box>
       </Box>
     </Container>
-  )
+  );
 }

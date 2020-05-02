@@ -1,23 +1,23 @@
-import React from "react"
-import Container from "@material-ui/core/Container"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import Box from "@material-ui/core/Box"
-import SchoolIcon from "@material-ui/icons/School"
-import WorkIcon from "@material-ui/icons/Work"
+import React from "react";
+import Container from "@material-ui/core/Container";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import Box from "@material-ui/core/Box";
+import SchoolIcon from "@material-ui/icons/School";
+import WorkIcon from "@material-ui/icons/Work";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-} from "react-vertical-timeline-component"
-import "react-vertical-timeline-component/style.min.css"
-import { makeStyles } from "@material-ui/core/styles"
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(() => ({
   noPadding: { width: "100% !important" },
-}))
+}));
 
 export default function LifeTimeline() {
-  const classes = useStyles()
+  const classes = useStyles();
   const data = useStaticQuery(graphql`
     query {
       allExperiencesJson {
@@ -57,7 +57,7 @@ export default function LifeTimeline() {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Container maxWidth={"md"}>
@@ -145,5 +145,5 @@ export default function LifeTimeline() {
         ))}
       </VerticalTimeline>
     </Container>
-  )
+  );
 }

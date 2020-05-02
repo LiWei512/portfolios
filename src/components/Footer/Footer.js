@@ -1,8 +1,7 @@
-import React from "react"
-import Typography from "@material-ui/core/Typography"
-import Box from "@material-ui/core/Box"
-import Emoji from "./Emoji"
-import gatsbyIcon from "../static/gatsby.svg"
+import React from "react";
+import { Box, Typography } from '@material-ui/core';
+import { Emoji } from "components";
+import gatsbyIcon from "../../static/gatsby.svg";
 
 export default function Footer() {
   return (
@@ -30,5 +29,5 @@ export default function Footer() {
         </Typography>
       </Box>
     </footer>
-  )
+  );
 }

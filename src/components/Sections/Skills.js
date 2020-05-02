@@ -1,13 +1,8 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
-import Container from "@material-ui/core/Container"
-import Typography from "@material-ui/core/Typography"
-import Box from "@material-ui/core/Box"
-import Paper from "@material-ui/core/Paper"
-import Grid from "@material-ui/core/Grid"
-
-import SkillBar from "../SkillBar"
+import { Container, Typography, Box, Paper, Grid } from '@material-ui/core';
+import { SkillBar } from "components";
 
 export default function Skills() {
   const query = graphql`
@@ -29,9 +24,9 @@ export default function Skills() {
         }
       }
     }
-  `
+  `;
 
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
 
   return (
     <Container maxWidth="md">
@@ -82,5 +77,5 @@ export default function Skills() {
         </Paper>
       </Box>
     </Container>
-  )
+  );
 }

@@ -1,15 +1,13 @@
-import React from "react"
-import { Link as GatsbyLink, navigate, useStaticQuery, graphql, withPrefix } from "gatsby"
-import { makeStyles } from "@material-ui/core/styles"
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
+import React from "react";
+import { Link as GatsbyLink, navigate, useStaticQuery, graphql, withPrefix } from "gatsby";
+import { makeStyles } from "@material-ui/styles";
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import {
   AppBar, Toolbar, Typography, Fab, useScrollTrigger
 } from '@material-ui/core';
-import Img from "gatsby-image"
-import { useLocation } from '@reach/router'
-
-import HideOnScroll from "./HideOnScroll"
-import ScrollTop from "./ScrollTop"
+import Img from "gatsby-image";
+import { useLocation } from '@reach/router';
+import { HideOnScroll, ScrollTop } from 'components';
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -48,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   active: {
     textDecoration: "underline",
   },
-}))
+}));
 
 const navLinks = [
   {
@@ -67,7 +65,7 @@ const navLinks = [
   //   to: '/contact',
   //   title: 'Contact',
   // },
-]
+];
 
 const query = graphql`
   query SiteTitleQuery {
@@ -86,13 +84,13 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 const Header = props => {
-  const classes = useStyles()
+  const classes = useStyles();
   const location = useLocation();
-  const data = useStaticQuery(query)
-  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 0 })
+  const data = useStaticQuery(query);
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 0 });
   const isHome = location.pathname === withPrefix('/');
 
   return (
@@ -142,7 +140,7 @@ const Header = props => {
         </Fab>
       </ScrollTop>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

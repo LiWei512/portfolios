@@ -1,20 +1,16 @@
-import React from "react"
-import Container from "@material-ui/core/Container"
-import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
-import Avatar from "@material-ui/core/Avatar"
-import Box from "@material-ui/core/Box"
-
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import Slider from "react-slick"
+import React from "react";
+import { makeStyles } from "@material-ui/styles";
+import { Container, Typography, Avatar, Box } from "@material-ui/core";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const useStyles = makeStyles(theme => ({
   avatar: {
     width: theme.spacing(12),
     height: theme.spacing(12),
   },
-}))
+}));
 
 const testimonials = [
   {
@@ -38,10 +34,10 @@ const testimonials = [
     title: "Lorem ipsum dolor sit amet.",
     subtitle: "Lorem ipsum dolor sit amet.",
   },
-]
+];
 
 export default function Testimonials() {
-  const classes = useStyles()
+  const classes = useStyles();
   var settings = {
     dots: true,
     infinite: true,
@@ -51,7 +47,7 @@ export default function Testimonials() {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-  }
+  };
 
   return (
     <Container maxWidth={"md"}>
@@ -114,5 +110,5 @@ export default function Testimonials() {
         </Box>
       </Box>
     </Container>
-  )
+  );
 }

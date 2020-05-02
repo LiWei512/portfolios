@@ -1,20 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { makeStyles } from "@material-ui/core/styles"
-import Dialog from "@material-ui/core/Dialog"
-import DialogContent from "@material-ui/core/DialogContent"
-import DialogTitle from "@material-ui/core/DialogTitle"
-import Box from "@material-ui/core/Box"
-import Paper from "@material-ui/core/Paper"
-import Grid from "@material-ui/core/Grid"
-import Typography from "@material-ui/core/Typography"
-import useMediaQuery from "@material-ui/core/useMediaQuery"
-import { useTheme } from "@material-ui/core/styles"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import IconButton from "@material-ui/core/IconButton"
-import ArrowBackIcon from "@material-ui/icons/ArrowBack"
-import Link from "@material-ui/core/Link"
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles, useTheme } from "@material-ui/styles";
+
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import { IconButton, useMediaQuery, Typography, Grid, Paper, Box, Dialog, DialogTitle, DialogContent } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   caption: {
@@ -40,14 +31,14 @@ const useStyles = makeStyles(theme => ({
   link: {
     color: theme.palette.text.primary,
   },
-}))
+}));
 
 export default function ProjectModal(props) {
-  const theme = useTheme()
-  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"))
-  const classes = useStyles()
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const classes = useStyles();
 
-  const { open, onClose, projectId } = props
+  const { open, onClose, projectId } = props;
   const data = useStaticQuery(graphql`
     query {
       allProjectsJson {
@@ -70,10 +61,10 @@ export default function ProjectModal(props) {
         }
       }
     }
-  `)
-  let edge = data.allProjectsJson.edges.find(edge => edge.node.id === projectId)
+  `);
+  let edge = data.allProjectsJson.edges.find(edge => edge.node.id === projectId);
 
-  let project = edge.node
+  let project = edge.node;
 
   return (
     <Dialog
@@ -178,10 +169,10 @@ export default function ProjectModal(props) {
         )}
       </DialogContent>
     </Dialog>
-  )
+  );
 }
 
 ProjectModal.propTypes = {
   open: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-}
+};

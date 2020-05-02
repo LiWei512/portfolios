@@ -1,6 +1,6 @@
-import React from "react"
-import { Container, Typography, Box } from "@material-ui/core"
-import { graphql, useStaticQuery } from "gatsby"
+import React from "react";
+import { Container, Typography, Box } from "@material-ui/core";
+import { graphql, useStaticQuery } from "gatsby";
 
 export default function Summary() {
   const query = graphql`
@@ -13,9 +13,9 @@ export default function Summary() {
         }
       }
     }
-  `
+  `;
 
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
 
   return (
     <Container maxWidth="md">
@@ -38,5 +38,5 @@ export default function Summary() {
         </Box>
       </Box>
     </Container>
-  )
+  );
 }

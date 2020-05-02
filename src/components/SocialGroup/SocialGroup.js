@@ -1,8 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import IconButton from "@material-ui/core/IconButton"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Box from "@material-ui/core/Box"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { IconButton, Box } from "@material-ui/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SocialGroup = () => {
   const data = useStaticQuery(graphql`
@@ -17,7 +16,7 @@ const SocialGroup = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Box display="flex">
@@ -34,7 +33,7 @@ const SocialGroup = () => {
         </IconButton>
       ))}
     </Box>
-  )
-}
+  );
+};
 
-export default SocialGroup
+export default SocialGroup;

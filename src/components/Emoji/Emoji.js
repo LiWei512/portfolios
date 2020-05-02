@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
+
 const Emoji = ({ label, symbol, ...props }) => (
   <span
-    className="emoji"
     role="img"
     aria-label={label ? label : ""}
     aria-hidden={label ? "false" : "true"}
@@ -9,5 +9,6 @@ const Emoji = ({ label, symbol, ...props }) => (
   >
     {symbol}
   </span>
-)
-export default Emoji
+);
+
+export default Emoji;
