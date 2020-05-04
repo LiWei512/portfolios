@@ -34,7 +34,7 @@
       "Work with typescript to ensure a robust codebase",
       "Developed several robust React components"
     ],
-    "url": "This app will be live soon"
+    "url": "This app is in progress. This app will be launched soon."
   },
   {
     "title": "My personal site",
@@ -62,7 +62,7 @@
       "Create a my personal logo",
       "Use Material UI layout for responsive design"
     ],
-    "url": "https://liwei512.github.io/portfolios"
+    "url": "https://weili512.github.io/portfolios"
   },
   {
     "title": "Multi.io",
@@ -136,7 +136,12 @@
       "SQL"
     ],
     "description": "This a free service music that pulls from youtube and Soundcloud.",
-    "details": [],
+    "details": [
+      "Write Function components leveraging React Hooks instead of Class components.",
+      "Develop Rest APIs to fetch music data from YouTube & SoundCloud.",
+      "Use howler.js to handle Audio.",
+      "Research YouTube & SoundCloud APIs."
+    ],
     "url": "https://cheeky.ro"
   },
   {
