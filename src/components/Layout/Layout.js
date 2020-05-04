@@ -1,24 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { CssBaseline } from "@material-ui/core";
-import { makeStyles } from '@material-ui/styles';
-import { Header, Footer } from 'components';
-import clsx from 'clsx';
+import { makeStyles } from "@material-ui/styles";
+import { Header, Footer } from "components";
+import clsx from "clsx";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
   },
   main: {
     backgroundColor: theme.palette.primary.main,
-    flex: 'auto',
+    flex: "auto",
   },
   headerPadding: {
-    paddingTop: '4rem',
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: '3.5rem',
+    paddingTop: "4rem",
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "3.5rem",
     },
   },
 }));

@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { graphql, navigate } from "gatsby";
 
-import { IconButton, Container, Box, Paper, Grid, Typography } from '@material-ui/core';
+import { IconButton, Container, Box, Paper, Grid, Typography } from "@material-ui/core";
 import { Layout, SEO } from "components";
 
 

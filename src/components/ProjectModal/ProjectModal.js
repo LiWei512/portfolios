@@ -5,7 +5,7 @@ import { makeStyles, useTheme } from "@material-ui/styles";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import { IconButton, useMediaQuery, Typography, Grid, Paper, Box, Dialog, DialogTitle, DialogContent } from '@material-ui/core';
+import { IconButton, useMediaQuery, Typography, Grid, Paper, Box, Dialog, DialogTitle, DialogContent } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   caption: {

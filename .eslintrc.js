@@ -9,6 +9,7 @@ module.exports = {
   },
   rules: {
     "import/no-unresolved": [2, { commonjs: true, amd: true }],
-    "semi": 2
+    "semi": 2,
+    "quotes": 2,
   }
 }

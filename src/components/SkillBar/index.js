@@ -1,1 +1,1 @@
-export { default } from './SkillBar';
+export { default } from "./SkillBar";

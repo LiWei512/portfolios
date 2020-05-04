@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import { Container, Typography, Box, Paper, Grid } from '@material-ui/core';
+import { Container, Typography, Box, Paper, Grid } from "@material-ui/core";
 import { SkillBar } from "components";
 
 export default function Skills() {

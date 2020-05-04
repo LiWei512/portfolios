@@ -4,10 +4,10 @@ import { makeStyles } from "@material-ui/styles";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import {
   AppBar, Toolbar, Typography, Fab, useScrollTrigger
-} from '@material-ui/core';
+} from "@material-ui/core";
 import Img from "gatsby-image";
-import { useLocation } from '@reach/router';
-import { HideOnScroll, ScrollTop } from 'components';
+import { useLocation } from "@reach/router";
+import { HideOnScroll, ScrollTop } from "components";
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "auto",
     paddingLeft: 0,
     "& li": {
-      display: 'inline',
+      display: "inline",
       padding: "0 0.5rem",
     },
   },
@@ -91,7 +91,7 @@ const Header = props => {
   const location = useLocation();
   const data = useStaticQuery(query);
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 0 });
-  const isHome = location.pathname === withPrefix('/');
+  const isHome = location.pathname === withPrefix("/");
 
   return (
     <>

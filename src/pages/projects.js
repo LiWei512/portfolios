@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/styles";
 import { graphql, Link, withPrefix } from "gatsby";
 import Img from "gatsby-image";
 import { navigate } from "@reach/router";
-import { Box, ButtonBase, Paper, Typography, Grid, Container } from '@material-ui/core';
+import { Box, ButtonBase, Paper, Typography, Grid, Container } from "@material-ui/core";
 import { Layout, SEO } from "components";
 
 const useStyles = makeStyles(theme => ({
@@ -54,7 +54,7 @@ const ProjectsPage = ({ data }) => {
                     </Grid>
                     <Grid item>
                       <Link
-                        style={{ color: `black` }}
+                        style={{ color: "black" }}
                         to={`/projects/${li.fields.slug}`}
                       >
                         Show More

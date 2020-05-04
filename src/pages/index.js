@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, SEO } from 'components';
+import { Layout, SEO } from "components";
 import LifeTimeline from "components/Sections/LifeTimeline";
 import Testimonials from "components/Sections/Testimonials";
 import AboutMe from "components/Sections/AboutMe";

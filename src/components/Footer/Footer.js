@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from '@material-ui/core';
+import { Box, Typography } from "@material-ui/core";
 import { Emoji } from "components";
 import gatsbyIcon from "../../static/gatsby.svg";
 

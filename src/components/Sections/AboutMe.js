@@ -4,16 +4,16 @@ import Img from "gatsby-image";
 import { graphql, useStaticQuery, Link as GatsbyLink } from "gatsby";
 import { useTheme } from "@material-ui/core/styles";
 
-import { Typography, Container, Box, Button, Avatar, Link, useMediaQuery } from '@material-ui/core';
+import { Typography, Container, Box, Button, Avatar, Link, useMediaQuery } from "@material-ui/core";
 import { SocialGroup } from "components";
 
 
 const useStyles = makeStyles({
   root: {
     minHeight: "100vh",
-    position: 'relative',
-    display: 'flex',
-    justifyContent: 'center'
+    position: "relative",
+    display: "flex",
+    justifyContent: "center"
   },
   backgroundImageWrapper: {
     top: 0,
@@ -26,12 +26,12 @@ const useStyles = makeStyles({
     height: "100%",
   },
   content: {
-    padding: '4rem 0',
+    padding: "4rem 0",
     position: "relative",
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center"
   },
   avatar: {
     width: 160,

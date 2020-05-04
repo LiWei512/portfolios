@@ -1,1 +1,1 @@
-export { default } from './HideOnScroll';
+export { default } from "./HideOnScroll";

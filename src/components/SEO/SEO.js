@@ -42,43 +42,43 @@ function SEO({ description, lang, meta, title, image }) {
       titleTemplate={`%s | ${data.site.siteMetadata.title}`}
       meta={[
         {
-          name: `description`,
+          name: "description",
           content: metaDescription,
         },
         {
-          property: `og:title`,
+          property: "og:title",
           content: title,
         },
         {
-          property: `og:description`,
+          property: "og:description",
           content: metaDescription,
         },
         {
-          property: `og:image`,
+          property: "og:image",
           content: metaImage,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: "og:type",
+          content: "website",
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: "twitter:card",
+          content: "summary",
         },
         {
-          name: `twitter:creator`,
+          name: "twitter:creator",
           content: data.site.siteMetadata.author,
         },
         {
-          name: `twitter:title`,
+          name: "twitter:title",
           content: title,
         },
         {
-          name: `twitter:description`,
+          name: "twitter:description",
           content: metaDescription,
         },
         {
-          name: `twitter:image`,
+          name: "twitter:image",
           content: metaImage,
         },
       ].concat(meta)}
@@ -87,9 +87,9 @@ function SEO({ description, lang, meta, title, image }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: "en",
   meta: [],
-  description: ``,
+  description: "",
 };
 
 SEO.propTypes = {
