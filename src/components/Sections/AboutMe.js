@@ -8,66 +8,65 @@ import { Typography, Container, Box, Button, Avatar, Link, useMediaQuery } from 
 import { SocialGroup } from "components";
 
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   root: {
-    height: "100vh",
+    minHeight: "100vh",
+    position: 'relative',
+    display: 'flex',
+    justifyContent: 'center'
   },
-  splashImageWrapper: {
+  backgroundImageWrapper: {
     top: 0,
     bottom: 0,
     left: 0,
     right: 0,
-    width: "100%",
-    position: "absolute !important",
-    overflow: "hidden",
+    position: "absolute",
   },
-  splashImage: {
+  backgroundImage: {
     height: "100%",
   },
-  splashContent: {
+  content: {
+    padding: '4rem 0',
     position: "relative",
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    paddingTop: "4rem",
-    // border: '1px solid white',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   avatar: {
     width: 160,
     height: 160,
   },
-}));
+});
 
-export default function AboutMe() {
-  const query = graphql`
-    query {
-      background: file(relativePath: { eq: "landscape.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      avatar: file(relativePath: { eq: "labtocat.png" }) {
-        childImageSharp {
-          fixed(width: 160, height: 160) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      site {
-        siteMetadata {
-          tagline
-          subtitle1
-          subtitle2
-          email
+const query = graphql`
+  query {
+    background: file(relativePath: { eq: "landscape.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-  `;
+    avatar: file(relativePath: { eq: "labtocat.png" }) {
+      childImageSharp {
+        fixed(width: 160, height: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        tagline
+        subtitle1
+        subtitle2
+        email
+      }
+    }
+  }
+`;
 
+export default function AboutMe() {
   const data = useStaticQuery(query);
   const classes = useStyles();
   const theme = useTheme();
@@ -75,9 +74,9 @@ export default function AboutMe() {
 
   return (
     <Container disableGutters maxWidth={false} className={classes.root}>
-      <div className={classes.splashImageWrapper}>
+      <div className={classes.backgroundImageWrapper}>
         <Img
-          className={classes.splashImage}
+          className={classes.backgroundImage}
           fluid={data.background.childImageSharp.fluid}
           alt="Wei Li"
         />
@@ -85,64 +84,56 @@ export default function AboutMe() {
       <Container
         disableGutters
         maxWidth={"lg"}
-        className={classes.splashContent}
+        className={classes.content}
       >
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          textAlign="center"
-        >
-          <Box pb={4}>
-            <Avatar className={classes.avatar}>
-              <Img
-                // className={classes.splashImage}
-                fixed={data.avatar.childImageSharp.fixed}
-                alt="Wei Li"
-              />
-            </Avatar>
-          </Box>
+        <Box pb={4}>
+          <Avatar className={classes.avatar}>
+            <Img
+              fixed={data.avatar.childImageSharp.fixed}
+              alt="Wei Li"
+            />
+          </Avatar>
+        </Box>
 
-          <Box pb={2}>
-            <Typography
-              variant={matches ? "h2" : "h5"}
-              component="h1"
-              align="center"
-            >
-              <b>{data.site.siteMetadata.tagline}</b>
-            </Typography>
-          </Box>
+        <Box pb={2}>
+          <Typography
+            variant={matches ? "h2" : "h5"}
+            component="h1"
+            align="center"
+          >
+            <b>{data.site.siteMetadata.tagline}</b>
+          </Typography>
+        </Box>
 
-          <Box pb={2}>
-            <Typography variant="h6" component="h6" align="center">
-              <b>{data.site.siteMetadata.subtitle1}</b>
-            </Typography>
-          </Box>
+        <Box pb={2}>
+          <Typography variant="h6" component="h6" align="center">
+            <b>{data.site.siteMetadata.subtitle1}</b>
+          </Typography>
+        </Box>
 
-          <Box pb={2}>
-            <Typography variant="h6" component="span" align="center">
-              {data.site.siteMetadata.subtitle2}
-            </Typography>
-          </Box>
+        <Box pb={2}>
+          <Typography variant="h6" component="p" align="center">
+            {data.site.siteMetadata.subtitle2}
+          </Typography>
+        </Box>
 
-          <Box pb={1}>
-            <Typography variant="h6" component="span" align="center">
-              Contact me at{" "}
-              <Link href="mailto:developer.clear@gmail.com" color="textPrimary">
-                <strong>{data.site.siteMetadata.email}</strong>
-              </Link>
-            </Typography>
-          </Box>
+        <Box pb={1}>
+          <Typography variant="h6" component="p" align="center">
+            Contact me at{" "}
+            <Link href="mailto:developer.clear@gmail.com" color="textPrimary">
+              <strong>{data.site.siteMetadata.email}</strong>
+            </Link>
+          </Typography>
+        </Box>
 
-          <SocialGroup />
+        <SocialGroup />
 
-          <Box pt={2} pb={2}>
-            <GatsbyLink to="/projects" style={{ textDecoration: "none" }}>
-              <Button variant="contained" color="primary" size="large">
-                Projects I have worked
+        <Box pt={2} pb={2}>
+          <GatsbyLink to="/projects" style={{ textDecoration: "none" }}>
+            <Button variant="contained" color="primary" size="large">
+              Projects I have worked
               </Button>
-            </GatsbyLink>
-          </Box>
+          </GatsbyLink>
         </Box>
       </Container>
     </Container>

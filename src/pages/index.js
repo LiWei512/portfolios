@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Layout, SEO } from 'components';
 import LifeTimeline from "components/Sections/LifeTimeline";
 import Testimonials from "components/Sections/Testimonials";
@@ -10,7 +9,7 @@ import Skills from "components/Sections/Skills";
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
+    <Layout isHeader={false}>
       <SEO title="WeiLi" />
       <AboutMe />
       <Summary />
