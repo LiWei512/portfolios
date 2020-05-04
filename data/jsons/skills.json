@@ -6,11 +6,11 @@
     "skills": [
       {
         "type": "React",
-        "level": "80"
+        "level": "90"
       },
       {
         "type": "Redux",
-        "level": "80"
+        "level": "90"
       },
       {
         "type": "Gatsby",
@@ -18,11 +18,31 @@
       },
       {
         "type": "Next",
-        "level": "60"
+        "level": "70"
       },
       {
         "type": "Create-React-App",
-        "level": "80"
+        "level": "95"
+      },
+      {
+        "type": "Material UI",
+        "level": "90"
+      },
+      {
+        "type": "Ant Design",
+        "level": "90"
+      },
+      {
+        "type": "Git",
+        "level": "90"
+      },
+      {
+        "type": "Netlify",
+        "level": "90"
+      },
+      {
+        "type": "Webpack",
+        "level": "70"
       }
     ]
   },
@@ -33,11 +53,11 @@
     "skills": [
       {
         "type": "Node.js",
-        "level": "65"
+        "level": "90"
       },
       {
         "type": "Express.js",
-        "level": "80"
+        "level": "90"
       },
       {
         "type": "Sequelize ORM",
