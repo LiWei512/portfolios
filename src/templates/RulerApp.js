@@ -16,12 +16,13 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: 16,
     margin: 0,
   },
-  image: {
-    marginTop: 12,
-    marginBottom: 12
-  },
   link: {
     color: theme.palette.text.primary,
+  },
+  imageGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(160px, auto))",
+    gridGap: "1rem",
   },
 }));
 
@@ -48,13 +49,12 @@ export default function RulerApp(props) {
           <Typography variant="h6">{project.title}</Typography>
         </Box>
 
-        <Box my={2} component="section">
+        <Box my={2} component="section" className={classes.imageGrid}>
           {project.images.map((image, index) => (
             <Img
               key={index}
               fluid={image.childImageSharp.fluid}
               alt={index}
-              className={classes.image}
             />
           ))}
         </Box>
@@ -117,14 +117,9 @@ export default function RulerApp(props) {
             >
               URL
             </Typography>
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={classes.link}
-            >
+            <Typography className={classes.link}>
               {project.url}
-            </a>
+            </Typography>
           </Box>
         )}
       </Container>
@@ -154,7 +149,7 @@ export const query = graphql`
       }
       images {
         childImageSharp {
-          fluid(maxWidth: 1200) {
+          fluid(maxWidth: 375) {
             ...GatsbyImageSharpFluid
           }
         }

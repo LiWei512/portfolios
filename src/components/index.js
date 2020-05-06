@@ -9,3 +9,4 @@ export { default as ScrollTop } from "./ScrollTop";
 export { default as SEO } from "./SEO";
 export { default as SkillBar } from "./SkillBar";
 export { default as SocialGroup } from "./SocialGroup";
+export { default as SkillTag } from "./SkillTag";

@@ -39,7 +39,7 @@ exports.createPages = async ({ graphql, actions }) => {
     if (node.fields.slug === "ruler-app") {
       createPage({
         path: `projects/${node.fields.slug}`,
-        component: path.resolve("./src/templates/blog-project1.js"),
+        component: path.resolve("./src/templates/RulerApp.js"),
         context: {
           slug: node.fields.slug,
         },
