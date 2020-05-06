@@ -5,22 +5,22 @@
  */
 
 // You can delete this file if you're not using it
-const slug = require("slug")
-const path = require("path")
+const slug = require("slug");
+const path = require("path");
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === `ProjectsJson`) {
+  const { createNodeField } = actions;
+  if (node.internal.type === "ProjectsJson") {
     createNodeField({
       node,
-      name: `slug`,
+      name: "slug",
       value: slug(node.title, { lower: true }),
-    })
+    });
   }
-}
+};
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
   const result = await graphql(`
     query {
       allProjectsJson {
@@ -33,34 +33,34 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
+  `);
 
   result.data.allProjectsJson.edges.forEach(({ node }) => {
-    if (node.fields.slug === 'ruler-app') {
+    if (node.fields.slug === "ruler-app") {
       createPage({
         path: `projects/${node.fields.slug}`,
-        component: path.resolve(`./src/templates/blog-project1.js`),
+        component: path.resolve("./src/templates/blog-project1.js"),
         context: {
           slug: node.fields.slug,
         },
-      })
+      });
     }
     else {
       createPage({
         path: `projects/${node.fields.slug}`,
-        component: path.resolve(`./src/templates/blog-project.js`),
+        component: path.resolve("./src/templates/blog-project.js"),
         context: {
           slug: node.fields.slug,
         },
-      })
+      });
     }
-  })
-}
+  });
+};
 
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, "src"), "node_modules"],
     },
-  })
-}
+  });
+};
