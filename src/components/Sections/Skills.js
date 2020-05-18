@@ -65,7 +65,7 @@ export default function Skills() {
                     <Grid container spacing={2}>
                       {node.skills.map((skill, index) => (
                         <Grid item xs={12} key={index}>
-                          <SkillBar type={skill.type} level={skill.level} />
+                          <SkillBar label={skill.type} level={skill.level} />
                         </Grid>
                       ))}
                     </Grid>

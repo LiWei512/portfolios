@@ -1,12 +1,45 @@
 import React from "react";
-import { Typography, Box } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
+import VisibilitySensor from "react-visibility-sensor";
+import clsx from "clsx";
 
-export default function SkillBar({ type, level }) {
+const useStyles = makeStyles((theme) => ({
+  "progress": {
+    backgroundColor: "#eee",
+    height: 24,
+    width: "100%",
+    position: "relative"
+  },
+  "progressBar": (props) => ({
+    position: "absolute",
+    width: "1%",
+    height: "100%",
+    transition: "width .5s",
+    backgroundColor: theme.palette.primary.main,
+    "&.show": {
+      width: `${props.level}%`
+    }
+  }),
+  "progressLabel": {
+    fontWeight: "bold",
+    position: "relative"
+  }
+}));
+
+export default function SkillBar({ label, level }) {
+  const classes = useStyles({
+    level: level,
+  });
+
   return (
-    <Box bgcolor="#eee" height={24} width="100%">
-      <Box bgcolor="primary.main" width={`${level}%`} height="100%">
-        <Typography variant="body1" style={{ fontWeight: "bold" }}>{type}</Typography>
-      </Box>
-    </Box>
+    <div className={classes.progress}>
+      <VisibilitySensor>
+        {({ isVisible }) => (
+          <div className={clsx(classes.progressBar, isVisible && "show")} />
+        )}
+      </VisibilitySensor>
+      <Typography variant="body1" className={classes.progressLabel}>{label}</Typography>
+    </div>
   );
 }
