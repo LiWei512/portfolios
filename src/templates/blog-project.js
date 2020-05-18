@@ -53,7 +53,7 @@ export default function RulerApp(props) {
             <Img
               key={index}
               fluid={image.childImageSharp.fluid}
-              alt={index}
+              alt={project.title}
               className={classes.image}
             />
           ))}
