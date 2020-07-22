@@ -40,9 +40,8 @@
     "title": "My personal site",
     "coverImage": "../images/projects/portfolio/cover.png",
     "images": [
-      "../images/projects/portfolio/screencapture-boryslee111-github-io-portfolios-2020-03-13-00_15_24.png",
-      "../images/projects/portfolio/screencapture-boryslee111-github-io-portfolios-projects-1-2020-03-13-00_15_57.png",
-      "../images/projects/portfolio/screencapture-boryslee111-github-io-portfolios-projects-1-2020-03-13-00_17_45.png"
+      "../images/projects/portfolio/screencapture-weili512-github-io-portfolios-2020-07-23-02_59_59.png",
+      "../images/projects/portfolio/screencapture-weili512-github-io-portfolios-projects-ruler-app-2020-07-23-03_03_09.png"
     ],
     "skills": [
       "React",
