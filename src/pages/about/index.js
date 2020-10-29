@@ -16,7 +16,7 @@ const AboutPage = ({ data }) => {
       <Skills />
       {/* <Testimonials /> */}
       <LifeTimeline />
-      <Bio />
+      {/* <Bio /> */}
     </Layout>
   );
 };
