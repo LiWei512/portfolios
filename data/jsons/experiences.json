@@ -1,5 +1,20 @@
 [
   {
+    "logo": "../images/logos/demandiq.png",
+    "title": "Frontend Developer",
+    "subtitle": "Demand IQ",
+    "subtitle1": "Denver, Colorado, USA",
+    "description": "Work as a frontend developer in this company.",
+    "details": [
+      "I speed up the first load time for good UX. As a result, It increased the conversation rate a lot.",
+      "Maintain and refactored Stella and Stella Portal that built with Create-React-App.",
+      "Implement new features such as booking module and utility bill data sharing module and so on(React, Redux, Redux-Saga).",
+      "Implement Google Analytics, Facebook Pixel, Jornaya, Hotjar, Heap Analytics to give comprehensive insights to solar providers about how customers use Stella.",
+      "Version Control using Git and GitHub"
+    ],
+    "date": "June 2020 - present"
+  },
+  {
     "logo": "../images/logos/nrl.png",
     "title": "Full Stack Developer",
     "subtitle": "No Rest Labs",
