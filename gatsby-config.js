@@ -10,7 +10,7 @@ const {
 } = require("@fortawesome/free-brands-svg-icons");
 
 module.exports = {
-  pathPrefix: "/portfolios",
+  // pathPrefix: "/portfolios",
   siteMetadata: {
     baseUrl: "https://weili512.github.io",
     tagline: "Learn to Create, Learn to Innovate",
