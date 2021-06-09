@@ -13,7 +13,7 @@ module.exports = {
   // pathPrefix: "/portfolios",
   siteMetadata: {
     baseUrl: "https://weili512.github.io",
-    tagline: "Learn to Create, Learn to Innovate",
+    tagline: "",
     subtitle1: "This is Wei Li, full-stack developer and crypto enthusiast",
     subtitle2: "I am a freelancer based in Shenyang, Liaoning, China.",
     email: "developer.clear@gmail.com",
